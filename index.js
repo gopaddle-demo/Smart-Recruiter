@@ -5,7 +5,7 @@ const body_parser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT;
+const PORT = process.env.PORT;
 const db = require('./DataBase/db');
 const loginController = require('./controller/loginController');
 const StudentController = require('./controller/StudentController');
@@ -15,6 +15,7 @@ app.use(body_parser.urlencoded({ extended: true }));
 app.use(body_parser.json());
 app.use('/Admin', loginController);
 app.use('/Student', StudentController);
+//app.use(express.static('frontend/build'));
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
@@ -27,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //app listen
-app.listen(port, () => {
-    console.log(`http://localhost:${port}/`);
+app.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}/`);
 });
 
