@@ -1,7 +1,7 @@
 //init code
 const mongoose = require('mongoose');
 const assert = require('assert');
-const MONGODB_URL = process.env.DB_URL;
+const MONGODB_URL = process.env.MONGODB_URL;
 
 //connection code
 const mongoDBconnect = async (req, res) => {
