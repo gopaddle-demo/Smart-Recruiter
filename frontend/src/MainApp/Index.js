@@ -41,7 +41,7 @@ const Index = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-2 col-6 d-flex align-items-center justify-content-center">
-                            <h2>Google</h2>
+                            <h2>WitMates</h2>
                         </div>
                         <div className="col-md-2 col-6 d-flex align-items-center justify-content-center">
                             <h2>TCS</h2>
@@ -107,36 +107,32 @@ const Index = () => {
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bx-code'></i></div>
-                                <h4><button>First Year</button></h4>
+                                <h4>First Year</h4>
                                 <p>get knowlegde of programming languages which programming language is best for you</p>
-                                <a href="read">Read more</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                             data-aos-delay="200">
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxs-terminal'></i></div>
-                                <h4><button>Second Year</button></h4>
+                                <h4>Second Year</h4>
                                 <p>Learn what is Competitive programming and which website is best to do Competitive programming</p>
-                                <a href="read">Read more</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                             data-aos-delay="300">
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxs-data'></i></div>
-                                <h4><button>Third Year</button></h4>
+                                <h4>Third Year</h4>
                                 <p>Get prepare for your placement and interview tips</p>
-                                <a href="read">Read more</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                             data-aos-delay="400">
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxl-javascript'></i></div>
-                                <h4><button>Fourth Year</button></h4>
+                                <h4>Fourth Year</h4>
                                 <p>Learn about internship and get best website to get best internship for you</p>
-                                <a href="read">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -257,7 +253,7 @@ const Index = () => {
                             <p>Please click on button to start learning from today and get placed</p>
                         </div>
                         <div class="col-lg-3 cta-btn-container text-center">
-                            <button class="cta-btn align-middle" href="#">Get Started</button>
+                            <Link to="/StudentLogin"><button class="cta-btn align-middle" href="#">Get Started</button></Link>
                         </div>
                     </div>
                 </div>
@@ -279,7 +275,7 @@ const Index = () => {
                                 <div class="member-info">
                                     <h4>Nayan Pal</h4>
                                     <span>Chief Executive Officer</span>
-                                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                                    <p></p>
                                     <div class="social">
                                         <a href="#link"><i class='bx bxl-instagram-alt'></i></a>
                                         <a href="#link"><i class='bx bxl-linkedin-square'></i></a>

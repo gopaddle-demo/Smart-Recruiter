@@ -55,16 +55,17 @@ router.post('/verifyEmail',
                 console.log(otp + " " + req.body.email);
 
                 let body = {
-                    from: 'nayanpalmns@gmail.com',
+                    from: 'svvvsmartrecruiter@gmail.com',
                     to: req.body.email,
                     subject: 'One Time Password from Svvv Smart Recuiter Team',
                     html: `<h2>Hello your OTP for email verification is <span style='background:yellow'> ${otp} <span></h2> 
-                    <br/> <u>please not share this OTP with others</u>`
+                    <br/> <u>please not share this OTP with anyone</u>`
                 }
 
                 transporter.sendMail(body, (err, result) => {
                     //if any err come
                     if (err) {
+                        console.log(err);
                         return res.json({
                             status: false,
                             msg: 'Invalid email or server error, please contact to Admin',
