@@ -253,7 +253,7 @@ const Index = () => {
                             <p>Please click on button to start learning from today and get placed</p>
                         </div>
                         <div class="col-lg-3 cta-btn-container text-center">
-                            <Link to="/StudentLogin"><button class="cta-btn align-middle" href="#">Get Started</button></Link>
+                            <Link to="/StudentLogin"><button class="cta-btn align-middle">Get Started</button></Link>
                         </div>
                     </div>
                 </div>
