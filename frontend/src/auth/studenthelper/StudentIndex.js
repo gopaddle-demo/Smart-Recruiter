@@ -45,19 +45,38 @@ export const studentSignIn = student => {
 /** **************************
  * Student Login or SignIn API 
 *******************************/
-export const sendOTPOnmail = email => {
+export const sendOTPOnmail = student => {
     return fetch(`${API}Student/emailauthentication/verifyEmail`, {
         method: "POST",
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(email)
+        body: JSON.stringify(student)
     })
         .then((res) => {
             return res.json();
         })
-        .catch(err =>{
+        .catch(err => {
             console.log(err);
         });
+}
+/** **************************
+ * Student forgot Password API 
+*******************************/
+export const forgotpassword = student => {
+    return fetch(`${API}Student/forgotpassword`, {
+        method: "PUT",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(student)
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }

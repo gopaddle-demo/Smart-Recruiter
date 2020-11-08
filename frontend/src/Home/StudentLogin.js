@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { studentSignUp, studentSignIn, sendOTPOnmail } from '../auth/studenthelper/StudentIndex';
+import { studentSignUp, studentSignIn, sendOTPOnmail, forgotpassword } from '../auth/studenthelper/StudentIndex';
 import '../css/main.css'
 import '../css/util.css'
 import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css'
 import '../fonts/iconic/css/material-design-iconic-font.min.css'
-
-
 
 const StudentLogin = () => {
 
@@ -27,9 +25,10 @@ const StudentLogin = () => {
         emailverification: true,
         otpverification: false,
         registrationformdisplay: false,
+        forgotpasswordstate: false
     });
 
-    const { name, email, enrollment_id, branch, mobile_number, year_of_passing, password, Cpassword, success, error, loading, msg, emailverification, otpverification, registrationformdisplay } = Student;
+    const { name, email, enrollment_id, branch, mobile_number, year_of_passing, password, Cpassword, success, error, loading, condition, msg, emailverification, otpverification, registrationformdisplay, forgotpasswordstate } = Student;
 
     /*******************************************************************************
     * ---------- Handle Function -------------------------
@@ -43,9 +42,12 @@ const StudentLogin = () => {
     }
     const conditionchange2 = (event) => {
         event.preventDefault();
-        setStudent({ ...Student, condition: "login", error: false, success: false, enrollment_id: "", password: "", registrationformdisplay: false, emailverification: true });
+        setStudent({ ...Student, condition: "login", email:"", error: false, success: false, enrollment_id: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification:false });
     }
-
+    const conditionchange3 = (event) => {
+        event.preventDefault();
+        setStudent({ ...Student, condition: "forgotpassword" });
+    }
     /** ----------------------------------
      * Message Functions
     -------------------------------------- */
@@ -94,7 +96,7 @@ const StudentLogin = () => {
      **********************************************************************/
     const onSubmit = (event) => {
         event.preventDefault();
-        if (Student.condition === "login") {
+        if (condition === "login") {
             if (enrollment_id === "") {
                 alert("please enter your Email address");
             } else if (password === "") {
@@ -103,7 +105,6 @@ const StudentLogin = () => {
                 setStudent({ ...Student, loading: true });
                 studentSignIn({ enrollment_id, password })
                     .then(data => {
-                        console.log("login Data", data);
                         if (data.status === true) {
                             alert(data.msg);
                         } else {
@@ -118,7 +119,7 @@ const StudentLogin = () => {
                     })
             }
 
-        } else if (Student.condition === "signUp") {
+        } else if (condition === "signUp") {
 
             if (name === "") {
                 alert("please enter Name");
@@ -141,7 +142,6 @@ const StudentLogin = () => {
             } else {
                 studentSignUp({ name, email, enrollment_id, branch, mobile_number, year_of_passing, password })
                     .then(data => {
-                        console.log("Student Data", data);
                         if (data.status === true) {
                             setStudent({
                                 ...Student,
@@ -169,6 +169,39 @@ const StudentLogin = () => {
                         }
                     })
             }
+        } else if (condition === "forgotpassword") {
+            if(password === "")
+                alert("please enter password");
+            else if (Cpassword === "")
+                alert("please enter confirm password");
+            else if (password !== Cpassword)
+                alert("password Not match");
+            else{
+                setStudent({...Student, loading: true})
+                forgotpassword({ email, password })
+                .then(data =>{
+                    if(data.status === true){
+                        setStudent({
+                            ...Student,
+                            msg: data.msg,
+                            success: true,
+                            loading: false,
+                            error: false,
+                            email: "",
+                            password: "",
+                            Cpassword: ""
+                        })
+                    }else if (data.status === false){
+                        setStudent({
+                            ...Student,
+                            msg: data.msg,
+                            error: true,
+                            success: false,
+                            loading: false
+                        })
+                    }
+                })
+            }
         }
     }
 
@@ -182,7 +215,7 @@ const StudentLogin = () => {
             alert("please enter email");
             setStudent({ ...Student, loading: false, emailverification: true })
         } else {
-            sendOTPOnmail({ email })
+            sendOTPOnmail({ email, condition })
                 .then(res => {
                     if (res.status === true) {
                         setStudent({
@@ -206,18 +239,60 @@ const StudentLogin = () => {
     /** *-------Check OTP of user and system Generated */
     const otpcheck = () => {
         if (enrollment_id === msg) {
-            setStudent({
-                ...Student,
-                otpverification: false,
-                registrationformdisplay: true,
-                loading: false,
-                enrollment_id: "",
-                msg: ""
-            })
+            if (condition === 'signUp') {
+                setStudent({
+                    ...Student,
+                    otpverification: false,
+                    registrationformdisplay: true,
+                    loading: false,
+                    enrollment_id: "",
+                    msg: ""
+                })
+            } else if (condition === 'forgotpassword') {
+                setStudent({
+                    ...Student,
+                    otpverification: false,
+                    forgotpasswordstate: true,
+                    loading: false
+                })
+            }
         } else {
             alert('OTP not match, please enter correct OTP');
         }
     }
+    const forgotpass = () => {
+        return (
+            forgotpasswordstate && (
+                <div>
+                    <div className="row">
+                        <div className="col-md-12 text-center">
+                            <h1>Change your Password</h1>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="row m-t-20 m-b-30">
+                        <div className="col-md-8 offset-md-2">
+                            <div className="wrap-input100 validate-input m-b-15">
+                                <span className="label-input100">Password<span class="asteriskField">*</span></span>
+                                <input className="input100" type="password" placeholder="Please enter new password" value={password} onChange={handleChange("password")}/>
+                                <span className="focus-input100" data-symbol="&#xf206;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row m-t-20 m-b-30">
+                        <div className="col-md-8 offset-md-2">
+                            <div className="wrap-input100 validate-input m-b-15">
+                                <span className="label-input100">confirm Password<span class="asteriskField">*</span></span>
+                                <input className="input100" type="password" placeholder="Please re-enter your password" value={Cpassword} onChange={handleChange("Cpassword")}/>
+                                <span className="focus-input100" data-symbol="&#xf206;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        )
+    }
+
     /** ----------------------------------
      * Email and OTP forms
     -------------------------------------- */
@@ -257,7 +332,7 @@ const StudentLogin = () => {
                     <hr />
                     <div className="row m-t-40 m-b-30">
                         <div className="col-md-8 offset-md-2">
-                            <p> Please enter a one time password which send on given mail</p>
+                            <p> Please enter a one time password which send on {email}</p>
                             <div className="wrap-input100 validate-input m-b-15">
                                 <span className="label-input100">One time password (OTP)<span class="asteriskField">*</span></span>
                                 <input className="input100" type="email" placeholder="Please enter OTP" value={enrollment_id} onChange={handleChange("enrollment_id")} />
@@ -376,6 +451,16 @@ const StudentLogin = () => {
                     <button type="button" class="btn btn-primary" onClick={onSubmit}>SignUp</button>
                 </div>
             )
+        } else if (forgotpasswordstate === true) {
+            return (
+                <div class="modal-footer">
+                    {successmsg()}
+                    {errormsg()}
+                    {loadingmsg()}
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
+                    <button type="button" class="btn btn-primary" onClick={onSubmit}>change password</button>
+                </div>
+            )
         }
     }
 
@@ -393,6 +478,7 @@ const StudentLogin = () => {
                                 {loadingmsg()}
                                 {otpForm()}
                                 {registrationForm()}
+                                {forgotpass()}
                             </div>
                             {modalFooterButton()}
                         </div>
@@ -433,7 +519,12 @@ const StudentLogin = () => {
                             </div>
                             <div className="flex-col-c p-t-20">
                                 <h3>
-                                    New to the Website please <button type="button" data-toggle="modal" data-target="#exampleModal" onClick={conditionchange}>SignUp</button>
+                                    New to the Website please <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange}><u>SignUp</u></button>
+                                </h3>
+                            </div>
+                            <div className="flex-col-c p-t-10">
+                                <h3>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange3}><u>Forgot password</u></button>
                                 </h3>
                             </div>
                         </form>

@@ -122,6 +122,52 @@ router.post('/StudentLogin',
         });
     });
 
+/**---------------------------------------------------
+    * Forgot password API  
+------------------------------------------------------*/
+router.put('/forgotpassword',
+    [
+        check('email').isEmail().normalizeEmail(),
+        check('password').not().isEmpty().trim().escape()
+    ],
+    (req, res) => {
+        //check validation Errors
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            return res.json({
+                status: false,
+                msg: 'Invalid Input....!',
+                err: error.array()
+            });
+        }
+        //password hashing
+        const hashpassword = bcryptjs.hashSync(req.body.password, 10);
+        student_model.findOneAndUpdate({ 'email': req.body.email }, { 'password': hashpassword }, (err, result) => {
+            //if error
+            if (err) {
+                return res.json({
+                    status: false,
+                    msg: 'Server Error, please contact to Admin',
+                    error: err
+                });
+            }
+            //if result is null then email id not found
+            if (result === null) {
+                return res.json({
+                    status: false,
+                    msg: 'Email Not Found please SignUp First...!',
+                });
+            } else {
+                return res.json({
+                    status: true,
+                    msg: 'password change successfully....!',
+                });
+            }
+
+        });
+    }
+);
+
 
 //exports module
 module.exports = router;
