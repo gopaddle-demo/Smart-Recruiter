@@ -8,6 +8,9 @@ import Student from './Dashboard/student';
 import Alumni from './Dashboard/alumni';
 import StudentLogin from './Home/StudentLogin';
 import Index from './MainApp/Index';
+import StudentHome from './Student/StudentHome';
+import RoadmapsHome from './Student/Roadmaps/RoadmapsHome';
+import YearHome from './Student/Years/YearHome';
 
 const Routes = () =>{
     return(
@@ -21,6 +24,9 @@ const Routes = () =>{
                     <Route path="/student" exact component={Student}></Route>
                     <Route path="/alumni" exact component={Alumni}></Route>
                     <Route path="/StudentLogin" exact component={StudentLogin}></Route>
+                    <Route path="/StudentHome" exact component={StudentHome}></Route>
+                    <Route path="/RoadmapsHome" exact component={RoadmapsHome}></Route>
+                    <Route path="/YearHome" exact component={YearHome}></Route>
                 </Switch>
             </Router>
         </div>

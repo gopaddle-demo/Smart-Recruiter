@@ -4,6 +4,7 @@ import '../css/main.css'
 import '../css/util.css'
 import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css'
 import '../fonts/iconic/css/material-design-iconic-font.min.css'
+import { Redirect } from 'react-router-dom';
 
 const StudentLogin = () => {
 
@@ -25,10 +26,11 @@ const StudentLogin = () => {
         emailverification: true,
         otpverification: false,
         registrationformdisplay: false,
-        forgotpasswordstate: false
+        forgotpasswordstate: false,
+        didredirect: false
     });
 
-    const { name, email, enrollment_id, branch, mobile_number, year_of_passing, password, Cpassword, success, error, loading, condition, msg, emailverification, otpverification, registrationformdisplay, forgotpasswordstate } = Student;
+    const { name, email, enrollment_id, branch, mobile_number, year_of_passing, password, Cpassword, success, error, loading, condition, msg, emailverification, otpverification, registrationformdisplay, forgotpasswordstate, didredirect } = Student;
 
     /*******************************************************************************
     * ---------- Handle Function -------------------------
@@ -90,6 +92,13 @@ const StudentLogin = () => {
             )
         )
     }
+    const redirecttohome = ()=>{
+        return (
+            didredirect && (
+                <Redirect to="/StudentHome" />
+            )
+        )
+    }
 
     /**********************************************************************
      * OnSubmit Button
@@ -106,7 +115,10 @@ const StudentLogin = () => {
                 studentSignIn({ enrollment_id, password })
                     .then(data => {
                         if (data.status === true) {
-                            alert(data.msg);
+                            setStudent({
+                                ...Student,
+                                didredirect: true
+                            })
                         } else {
                             setStudent({
                                 ...Student,
@@ -529,6 +541,7 @@ const StudentLogin = () => {
                             </div>
                         </form>
                         {StudentRegistration()}
+                        {redirecttohome()}
                     </div>
                 </div>
             </div>

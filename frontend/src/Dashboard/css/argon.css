@@ -8703,9 +8703,11 @@ a.close.disabled
     vertical-align: text-top !important;
 }
 
-.bg-primary
+.bg-main
 {
-    background-color: #5e72e4 !important;
+    background-image: url('../../images/wave1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a.bg-primary:hover,
@@ -18827,12 +18829,24 @@ a.btn-icon-only
     text-overflow: ellipsis;
 }
 
-.card
-{
-    margin-bottom: 30px;
 
-    border: 0; 
-    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
+.mycard
+{
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.3);
+    transition: .4s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: border-box;
+}
+.mycard:hover{
+    background: rgb(255, 0, 0,0.3);
+    transform: scale(0.96);
 }
 
 .card-translucent

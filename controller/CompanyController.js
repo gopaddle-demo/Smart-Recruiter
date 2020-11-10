@@ -25,8 +25,8 @@ router.get('/', (req, res) => {
 router.post('/add_company',
     [
         check('name').not().isEmpty().trim().escape(),
-        check('pre_placement').isISO8601().toDate(),
-        check('date').isISO8601().toDate(),
+        check('pre_placement').not().isEmpty().trim().escape(),
+        check('date').not().isEmpty().trim().escape(),
         check('Cpackage').not().isEmpty().trim().escape(),
         check('student_placed').not().isEmpty().trim().escape(),
         check('technical').not().isEmpty().trim().escape(),
@@ -41,7 +41,7 @@ router.post('/add_company',
                 err: error.array()
             })
         }
-        //create query
+
         company_model.create({
             name: req.body.name,
             pre_placement: req.body.pre_placement,

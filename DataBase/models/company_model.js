@@ -1,6 +1,5 @@
 //init code
 const mongoose = require('mongoose');
-const dateonly = require('mongoose-dateonly')(mongoose);
 //creating Schema
 const loginschema = mongoose.Schema({
     name: {
@@ -9,11 +8,11 @@ const loginschema = mongoose.Schema({
         unique: true
     },
     pre_placement: {
-        type: dateonly,
+        type: String,
         require: true,
     },
     date: {
-        type: dateonly,
+        type: String,
         require: true,
     },
     Cpackage: {

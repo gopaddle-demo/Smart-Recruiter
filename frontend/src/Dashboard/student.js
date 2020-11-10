@@ -63,18 +63,21 @@ const Student = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {students.map((data, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <td>{data.name}</td>
-                                            <td>{data.email}</td>
-                                            <td>{data.enrollment_id}</td>
-                                            <td>{data.branch}</td>
-                                            <td>{data.mobile_number}</td>
-                                            <td>{data.year_of_passing}</td>
-                                        </tr>
-                                    )
-                                })}
+                                {
+                                    students.map((data, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{data.name}</td>
+                                                <td>{data.email}</td>
+                                                <td>{data.enrollment_id}</td>
+                                                <td>{data.branch}</td>
+                                                <td>{data.mobile_number}</td>
+                                                <td>{data.year_of_passing}</td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+
                             </tbody>
                         </div>
                     </div>

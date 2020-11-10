@@ -34,7 +34,7 @@ export const admin_logout = () => {
             "Content-Type": "application/json"
         }
     })
-        .then(res=> {
+        .then(res => {
             return res.json();
         })
         .catch(err => {
@@ -44,12 +44,12 @@ export const admin_logout = () => {
 /** **************************
  * Admin Logout API 
 *******************************/
-export const isAuthenticated = (val) =>{
-    if(val === "login"){
+export const isAuthenticated = (val) => {
+    if (val === "login") {
         alert(val);
         return true;
     }
-    else if(val === "logout"){
+    else if (val === "logout") {
         alert(val);
         return false;
     }
@@ -129,7 +129,7 @@ export const getlocalstore = (val) => {
     if (typeof window !== undefined) {
         if (localStorage.getItem(val)) {
             companyData = JSON.parse(localStorage.getItem(val));
-        }
+        } 
     }
     return companyData;
 }

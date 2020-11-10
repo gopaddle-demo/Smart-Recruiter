@@ -33,6 +33,9 @@ const Company = () => {
     const handleChange = (val) => (event) => {
         setvalues({ ...values, error: false, sucess: false, loading: false, [val]: event.target.value })
     }
+    const handleChange2 = () => {
+        setvalues({ ...values, error: false, sucess: false, loading: false })
+    }
 
     /** ----------------------------------
      * Success Message Function
@@ -155,10 +158,10 @@ const Company = () => {
     const getCompanyDetailsFromLocal = () => {
         setCompanyData(getlocalstore("company_data"));
     }
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         getCompanyDetailsFromLocal();
-    },[]);
+    }, []);
     /** ----------------------------------
      * Company Details Form
     -------------------------------------- */
@@ -291,7 +294,7 @@ const Company = () => {
                             {successmsg()}
                             {loadingmsg()}
                             {errormsg()}
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={handleChange2}>Close</button>
                             <button type="button" className="btn btn-primary" onClick={onSubmit}>Save changes</button>
                         </div>
                     </div>
