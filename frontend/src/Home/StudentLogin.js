@@ -5,6 +5,7 @@ import '../css/util.css'
 import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css'
 import '../fonts/iconic/css/material-design-iconic-font.min.css'
 import { Redirect } from 'react-router-dom';
+import { localStore } from '../auth/helper';
 
 const StudentLogin = () => {
 
@@ -95,7 +96,7 @@ const StudentLogin = () => {
     const redirecttohome = ()=>{
         return (
             didredirect && (
-                <Redirect to="/StudentHome" />
+                <Redirect to="/StudentHome"/>
             )
         )
     }
@@ -115,9 +116,11 @@ const StudentLogin = () => {
                 studentSignIn({ enrollment_id, password })
                     .then(data => {
                         if (data.status === true) {
-                            setStudent({
-                                ...Student,
-                                didredirect: true
+                            localStore("student", data.data, ()=>{
+                                setStudent({
+                                    ...Student,
+                                    didredirect: true
+                                })
                             })
                         } else {
                             setStudent({

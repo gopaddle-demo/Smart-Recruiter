@@ -5,12 +5,11 @@ import { getlocalstore, get_company_details, localStore } from '../auth/helper';
 const StudentHome = () => {
 
     const [companyData, setcompanyData] = useState([]);
-
+    const [individualData, setindividualData] = useState([]);
     const getDetailsFromLocal = () => {
         if (getlocalstore("company_data").length !== 0) {
             setcompanyData(getlocalstore("company_data"));
         } else {
-            alert('local storage empty');
             get_company_details().then(res => {
                 if (res.status === true) {
                     localStore("company_data", res.data, () => {
@@ -26,22 +25,63 @@ const StudentHome = () => {
     }
 
     useEffect(() => {
-        getDetailsFromLocal();
+        getDetailsFromLocal()
     }, []);
 
+    const getIndividualCompany = (val) => () => {
+        companyData.map((data, index) => {
+            if (data._id === val) {
+                setindividualData(data);
+            }
+        })
+    }
     const CompanyModel = () => {
         return (
-            <div class="modal fade" id="companyModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+            <div className="modal fade" id="companyModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <div className="row">
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Company Name</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.name}</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Pre Placement Date</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.pre_placement}</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Date</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.date}</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Package</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.Cpackage}</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Student Placed last year</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.student_placed}</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">Technical</h2>
+                                </div>
+                                <div className="col-md-6 p-3 col-12">
+                                    <h2 className="static">{individualData.technical}</h2>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +111,7 @@ const StudentHome = () => {
                         <div className="row">
                             {companyData.map((data, index) => {
                                 return (
-                                    <button className="col-xl-3 col-md-6 mt-3" data-toggle="modal" data-target="#companyModel" key={index}>
+                                    <button className="col-xl-3 col-md-6 mt-3" data-toggle="modal" data-target="#companyModel" data-backdrop="static" data-keyboard="false" key={index} onClick={getIndividualCompany(data._id)}>
                                         <div className="mycard card-stats">
                                             <div className="card-body">
                                                 <div className="row">
@@ -90,7 +130,6 @@ const StudentHome = () => {
                     </div>
                 </div>
             </div>
-
         </Base>
     )
 }

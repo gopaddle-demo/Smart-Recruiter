@@ -31,9 +31,9 @@ const Navigation = ({ history, path }) => {
                         </div>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/")}>
+                        <div className="nav-link" style={currenttab(history, "/OffCampus")}>
                             <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/">Off Campus</Link></span>
+                            <span className="nav-link-text"><Link to="/OffCampus">Off Campus</Link></span>
                         </div>
                     </li>
                 </ul>

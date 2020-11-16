@@ -11,6 +11,11 @@ import Index from './MainApp/Index';
 import StudentHome from './Student/StudentHome';
 import RoadmapsHome from './Student/Roadmaps/RoadmapsHome';
 import YearHome from './Student/Years/YearHome';
+import PageNotFound from './PageNotFound';
+import off_campus from './Student/off_campus/off_campus';
+import Profile from './Student/Profile/Profile';
+import ChangePassword from './Student/Profile/ChangePassword';
+import EditProfile from './Student/Profile/EditProfile';
 
 const Routes = () =>{
     return(
@@ -27,6 +32,11 @@ const Routes = () =>{
                     <Route path="/StudentHome" exact component={StudentHome}></Route>
                     <Route path="/RoadmapsHome" exact component={RoadmapsHome}></Route>
                     <Route path="/YearHome" exact component={YearHome}></Route>
+                    <Route path="/OffCampus" exact component={off_campus}></Route>
+                    <Route path="/Profile" exact component={Profile}></Route>
+                    <Route path="/ChangePassword" exact component={ChangePassword}></Route>
+                    <Route path="/EditProfile" exact component={EditProfile}></Route>
+                    <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>
         </div>

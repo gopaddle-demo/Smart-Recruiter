@@ -114,7 +114,8 @@ router.post('/StudentLogin',
                         // sessStore.email = req.body.email;
                         return res.status(200).json({
                             status: true,
-                            msg: 'Login Sucessfully....'
+                            msg: 'Login Sucessfully....',
+                            data: student
                         });
                     }
                 });

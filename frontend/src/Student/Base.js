@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navigation from './Navigation';
+import { getlocalstore } from '../auth/helper';
+import { Link } from 'react-router-dom';
 
 const Base = ({
     children
 }) => {
+
+    const [name, setName] = useState([]);
+
+    const getStudentDetailsFromLocal = () => {
+        if (getlocalstore("student"))
+            setName(getlocalstore("student"));
+    }
+    useEffect(() => {
+        getStudentDetailsFromLocal()
+    }, []);
 
     return (
         <div>
@@ -49,8 +61,8 @@ const Base = ({
                                     <button class="nav-link pr-0" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         <div class="media align-items-center">
-                                            <div class="media-body  ml-2  d-none d-lg-block">
-                                                <span class="mb-0 text-sm  font-weight-bold">Nayan</span>
+                                            <div class="media-body ml-2 d-none d-lg-block">
+                                                <span class="mb-0 text-sm font-weight-bold">{name.name}</span>
                                             </div>
                                         </div>
                                     </button>
@@ -58,10 +70,12 @@ const Base = ({
                                         <div class="dropdown-header noti-title">
                                             <h6 class="text-overflow m-0">Welcome!</h6>
                                         </div>
-                                        <a href="pages/profile.html" class="dropdown-item">
-                                            <i class="ni ni-single-02"></i>
-                                            <span>My profile</span>
-                                        </a>
+                                        <Link to="/Profile">
+                                            <button class="dropdown-item">
+                                                <i class="ni ni-single-02"></i>
+                                                <span>My profile</span>
+                                            </button>
+                                        </Link>
                                         <div class="dropdown-divider"></div>
                                         <a href="#!" class="dropdown-item">
                                             <i class="ni ni-user-run"></i>

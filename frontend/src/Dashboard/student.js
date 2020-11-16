@@ -10,7 +10,7 @@ const Student = () => {
     const getStudentDetail = () => {
         getStudentDetails()
             .then(res => {
-                console.log("Student info", res);
+                //console.log("Student info", res);
                 if (res.status === true) {
                     localStore("StudentDetails", res.data, () => {
                         setStudents(res.data);
