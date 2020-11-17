@@ -80,3 +80,22 @@ export const forgotpassword = student => {
             console.log(err);
         })
 }
+/** **************************
+ * Update Student Profile API 
+*******************************/
+export const updateProfile = student => {
+    return fetch(`${API}Student/updateprofile`, {
+        method: "PUT",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(student)
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}

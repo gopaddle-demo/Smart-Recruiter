@@ -30,7 +30,6 @@ router.post('/StudentSignUp',
         check('mobile_number').not().isEmpty().trim().escape(),
         check('year_of_passing').not().isEmpty().trim().escape(),
         check('password').not().isEmpty().trim().escape(),
-
     ],
     (req, res) => {
         //check validation Errors
@@ -169,6 +168,67 @@ router.put('/forgotpassword',
     }
 );
 
+/**---------------------------------------------------
+    * Update Profile API  
+------------------------------------------------------*/
+router.put('/updateprofile',
+    [
+        check('name').not().isEmpty().trim().escape(),
+        check('email').isEmail().normalizeEmail(),
+        check('enrollment_id').not().isEmpty().trim().escape(),
+        check('branch').not().isEmpty().trim().escape(),
+        check('mobile_number').not().isEmpty().trim().escape(),
+        check('year_of_passing').not().isEmpty().trim().escape(),
+    ],
+    (req, res) => {
+        //check validation Errors
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            return res.json({
+                status: false,
+                msg: 'Invalid Input....!',
+                err: error.array()
+            });
+        }
+
+        const updateData = {
+            'name': req.body.name,
+            'enrollment_id': req.body.enrollment_id,
+            'branch': req.body.branch,
+            'mobile_number': req.body.mobile_number,
+            'year_of_passing': req.body.year_of_passing
+        }
+        //update profile
+        student_model.findOneAndUpdate({ 'email': req.body.email }, updateData, (err, result) => {
+            //if error in updating profile
+            if (err) {
+                return res.json({
+                    status: false,
+                    msg: 'Server Error',
+                    error: err
+                });
+            }
+            // if ok
+            if (result) {
+                student_model.findOne({ 'email': req.body.email }, (err, student) => {
+                    if (err) {
+                        return res.json({
+                            status: false,
+                            msg: 'Server error',
+                        })
+                    }
+                    if (student) {
+                        return res.json({
+                            status: true,
+                            msg: 'Profile Updated Successfully',
+                            student: student
+                        })
+                    }
+                })
+            }
+        })
+    }
+)
 
 //exports module
 module.exports = router;

@@ -10,7 +10,8 @@ const mongoDBconnect = async (req, res) => {
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true
+            useCreateIndex: true,
+            useFindAndModify: false
         },
         (err, resp) => {
             //check error
