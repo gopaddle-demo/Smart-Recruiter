@@ -16,6 +16,9 @@ import off_campus from './Student/off_campus/off_campus';
 import Profile from './Student/Profile/Profile';
 import ChangePassword from './Student/Profile/ChangePassword';
 import EditProfile from './Student/Profile/EditProfile';
+import WebDevelopment from './Student/Roadmaps/WebDevelopment/WebDevelopment';
+import BasicWebDevelopment from './Student/Roadmaps/WebDevelopment/BasicWebDevelopment';
+import FrontEndWebDevelopment from './Student/Roadmaps/WebDevelopment/FrontEndWebDevelopment';
 
 const Routes = () =>{
     return(
@@ -36,6 +39,9 @@ const Routes = () =>{
                     <Route path="/Profile" exact component={Profile}></Route>
                     <Route path="/ChangePassword" exact component={ChangePassword}></Route>
                     <Route path="/EditProfile" exact component={EditProfile}></Route>
+                    <Route path="/WebDevelopment" exact component={WebDevelopment}></Route>
+                    <Route path="/WebDevelopment/Basic" exact component={BasicWebDevelopment}></Route>
+                    <Route path="/WebDevelopment/Front-End-Web-Development" exact component={FrontEndWebDevelopment}></Route>
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>

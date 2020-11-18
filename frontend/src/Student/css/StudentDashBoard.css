@@ -1,0 +1,65 @@
+.basic_webDev {
+    position: relative;
+    overflow: hidden;
+}
+.basic_webDev::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url("../../images/roadmaps/webDevelopment/basic.jpg");
+}
+.basic_webDev .collaspebtn {
+    padding: 10px 15px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: left;
+    background-color: rgb(40, 116, 240, 0.2);
+    border-left: 5px solid rgb(40, 116, 240);
+    font-weight: 600;
+    transition: 0.3s;
+}
+.basic_webDev .collaspebtn:hover {
+    background-color: rgb(40, 116, 240, 0.3);
+    transform: translateY(-2px);
+}
+.basic_webDev .collapse .customcard {
+    padding: 10px 15px;
+    border-radius: 0px 0px 10px 10px;
+    text-align: left;
+    background-color: rgb(40, 116, 240, 0.2);
+    font-weight: 600;
+    border-top: 1px solid rgb(40, 116, 240, 0.1);
+}
+
+.basic_webDev .collapse .customcard ul {
+    padding-left: 20px;
+}
+.basic_webDev .collapse .customcard ul li {
+    list-style: disc;
+}
+
+.basic_webDev .frontEndBasicimg img {
+    border-radius: 50px;
+    object-fit: cover;
+    width: 100%;
+    border-left: 2px solid #2874f0;
+    border-right: 2px solid #2874f0;
+    padding: 5px;
+}
+.basic_webDev .collaspebtn a {
+    color: black;
+}
+.basic_webDev .blink {
+    animation: blinker 0.6s linear infinite;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
