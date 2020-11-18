@@ -1,9 +1,9 @@
 import React from 'react'
 import Base from '../../Base'
-import front_end_basic from '../../../images/roadmaps/webDevelopment/front-end-basic.PNG';
-import front_end_basic2 from '../../../images/roadmaps/webDevelopment/front-end-basic2.PNG';
-import front_end_basic3 from '../../../images/roadmaps/webDevelopment/front-end-basic3.PNG';
-import front_end_basic4 from '../../../images/roadmaps/webDevelopment/front-end-basic4.PNG';
+import front_end_basic from '../../../images/roadmaps/webDevelopment/frontEndBasic.png';
+import frontEndBasic2 from '../../../images/roadmaps/webDevelopment/frontEndBasic2.png';
+import frontEndBasic3 from '../../../images/roadmaps/webDevelopment/frontEndBasic3.png';
+import frontEndBasic4 from '../../../images/roadmaps/webDevelopment/frontEndBasic4.png';
 
 export default function FrontEndWebDevelopment() {
     return (
@@ -66,7 +66,7 @@ export default function FrontEndWebDevelopment() {
                         </div>
                         <div className="col-md-9">
                             <div className="frontEndBasicimg">
-                                <img className="img-responsive" src={front_end_basic2} alt="Front End Basic img" />
+                                <img className="img-responsive" src={frontEndBasic2} alt="Front End Basic img" />
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ export default function FrontEndWebDevelopment() {
                     <div className="row mt-4 mb-4">
                         <div className="col-md-9">
                             <div className="frontEndBasicimg">
-                                <img className="img-responsive" src={front_end_basic3} alt="Front End Basic img" />
+                                <img className="img-responsive" src={frontEndBasic3} alt="Front End Basic img" />
                             </div>
                         </div>
                         <div className="col-md-3">
@@ -118,7 +118,7 @@ export default function FrontEndWebDevelopment() {
                         </div>
                         <div className="col-md-9">
                             <div className="frontEndBasicimg">
-                                <img className="img-responsive" src={front_end_basic4} alt="Front End Basic img" />
+                                <img className="img-responsive" src={frontEndBasic4} alt="Front End Basic img" />
                             </div>
                         </div>
                     </div>
