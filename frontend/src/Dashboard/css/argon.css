@@ -7987,8 +7987,19 @@ a.close.disabled
 }
 
 .modal .modal-body .static{
+    border-left: 4px solid black;
+    padding-left: 30px;
+    background-color: rgb(40, 116, 240, 0.6);
+    padding: 5px;
+    transition: .4s;
+    box-shadow: 3px 3px 4px 0px rgb(0, 0, 0,0.3);
+    border-radius: 5px;
+    /* color: #fff; */
+}
+
+.modal .modal-body .dynamic{
     border-left: 4px solid #2874f0;
-    padding-left: 25px;
+    padding-left: 30px;
     background-color: rgb(0,0,0, 0.1);
     padding: 5px;
     transition: .4s;
@@ -7998,7 +8009,12 @@ a.close.disabled
 
 .modal .modal-body .static:hover{
     transform: translateY(-4px);
-    box-shadow: 6px 6px 6px 0px rgb(40, 116, 240,0.6);
+    box-shadow: 4px 4px 5px 0px rgb(0, 0, 0,0.5);
+}
+
+.modal .modal-body .dynamic:hover{
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 5px 0px rgb(40, 116, 240,0.6);
 }
 .modal-footer
 {

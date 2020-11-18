@@ -46,37 +46,37 @@ const StudentHome = () => {
                                     <h2 className="static">Company Name</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.name}</h2>
+                                    <h2 className="dynamic">{individualData.name}</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
                                     <h2 className="static">Pre Placement Date</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.pre_placement}</h2>
+                                    <h2 className="dynamic">{individualData.pre_placement}</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
                                     <h2 className="static">Date</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.date}</h2>
+                                    <h2 className="dynamic">{individualData.date}</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
                                     <h2 className="static">Package</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.Cpackage}</h2>
+                                    <h2 className="dynamic">{individualData.Cpackage}</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
                                     <h2 className="static">Student Placed last year</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.student_placed}</h2>
+                                    <h2 className="dynamic">{individualData.student_placed}</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
                                     <h2 className="static">Technical</h2>
                                 </div>
                                 <div className="col-md-6 p-3 col-12">
-                                    <h2 className="static">{individualData.technical}</h2>
+                                    <h2 className="dynamic">{individualData.technical}</h2>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const StudentHome = () => {
                         <div className="row">
                             {companyData.map((data, index) => {
                                 return (
-                                    <button className="col-xl-3 col-md-6 mt-3" data-toggle="modal" data-target="#companyModel" data-backdrop="static" data-keyboard="false" key={index} onClick={getIndividualCompany(data._id)}>
+                                    <button className="col-xl-3 col-md-6 mt-3" data-toggle="modal" data-target="#companyModel" key={index} onClick={getIndividualCompany(data._id)}>
                                         <div className="mycard card-stats">
                                             <div className="card-body">
                                                 <div className="row">
