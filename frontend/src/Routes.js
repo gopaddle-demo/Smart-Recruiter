@@ -23,6 +23,7 @@ import git_and_github from './Student/Roadmaps/WebDevelopment/git_and_github';
 import BackEndWebDevelopment from './Student/Roadmaps/WebDevelopment/BackEndWebDevelopment';
 import CompetitiveCodingIndex from './Student/Roadmaps/CompetitiveProgramming/CompetitiveCodingIndex';
 import CompetitiveBasic from './Student/Roadmaps/CompetitiveProgramming/CompetitiveBasic';
+import CompetitiveRoadmap from './Student/Roadmaps/CompetitiveProgramming/CompetitiveRoadmap';
 
 const Routes = () =>{
     return(
@@ -50,6 +51,7 @@ const Routes = () =>{
                     <Route path="/WebDevelopment/git_and_github" exact component={git_and_github}></Route>
                     <Route path="/CompetitiveProgramming" exact component={CompetitiveCodingIndex}></Route>
                     <Route path="/CompetitiveProgramming/Basic" exact component={CompetitiveBasic}></Route>
+                    <Route path="/CompetitiveProgramming/Roadmap" exact component={CompetitiveRoadmap}></Route>
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>

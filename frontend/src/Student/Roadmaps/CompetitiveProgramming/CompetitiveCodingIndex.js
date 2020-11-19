@@ -32,6 +32,20 @@ export default function CompetitiveCodingIndex() {
                                     </div>
                                 </Link>
                             </div>
+                            <div className="col-xl-4 col-md-6">
+                                <Link to="/CompetitiveProgramming/Roadmap">
+                                    <div className="mycard card-stats">
+                                        <div className="card-body">
+                                            <div className="row">
+                                                <button className="col-md-12">
+                                                    <h4 className="card-title text-uppercase text-muted mb-0">First Learn Basic</h4>
+                                                    <span className="h2 font-weight-bold mb-0">roadmaps</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

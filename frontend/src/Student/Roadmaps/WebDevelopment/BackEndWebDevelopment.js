@@ -3,6 +3,10 @@ import Base from '../../Base'
 import '../../css/StudentDashBoard.css';
 import { Link } from 'react-router-dom'
 import python from '../../../images/roadmaps/webDevelopment/BackEnd/python.png';
+import NodeJs from '../../../images/roadmaps/webDevelopment/BackEnd/NodeJs.PNG';
+import PHP from '../../../images/roadmaps/webDevelopment/BackEnd/php.PNG';
+import Ruby from '../../../images/roadmaps/webDevelopment/BackEnd/Ruby.PNG';
+import SQL from '../../../images/roadmaps/webDevelopment/BackEnd/SQL.png';
 
 export default function BackEndWebDevelopment() {
     return (
@@ -19,7 +23,7 @@ export default function BackEndWebDevelopment() {
                         </div>
                     </div>
                     <h3 className="text-center"><u><span className="blink">(Step - 1)</span> Before Learning Back End Development get familier with back end terminologies</u></h3>
-                    <div className="row mt-2">
+                    <div className="row mt-2 mb-4">
                         <div className="col-md-6 col-12 mt-2">
                             <div className="collaspebtn" data-toggle="collapse" href="#backcollapse1" aria-expanded="false" aria-controls="backcollapse1">
                                 What is web server ?
@@ -98,37 +102,139 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                     </div>
-                    <h3 className="text-center mt-5"><u><span className="blink">(Step - 2)</span> Choose one langauage from the list (Java, Python, NodeJs, PHP, Ruby)</u></h3>
-                    <div className="row align-items-center pt-4">
-                        <div className="col-lg-6 col-7">
-                            <nav aria-label="breadcrumb" className="d-none d-md-inline-block">
-                                <ol className="breadcrumb breadcrumb-links breadcrumb-dark">
-                                    <li className="breadcrumb-item"> Roadmap for python </li>
-                                </ol>
-                            </nav>
+                    <hr />
+                    <h3 className="text-center mt-4"><u><span className="blink">(Step - 2)</span> Learn SQL and interation of languages (Java, NodeJs, PHP, Python) with DataBase</u></h3>
+                    <div className="row mt-4 mb-4">
+                        <div className="col-md-6">
+                            <div className="frontEndBasicimg">
+                                <img className="img-responsive" src={SQL} alt="Sql img" />
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-12">
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.w3schools.com/sql/" target="blank">Learn SQL (v.Imp)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/what-is-rdbms" target="blank">Learn Relational DataBase</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/java-jdbc" target="blank">Get Basic knowlegde of JDBC</a>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-12">
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.w3schools.com/php/php_mysql_intro.asp" target="blank">Learn PHP:MySQL DataBase</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/nosql-databases" target="blank">Learn NoSQL DataBase</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.guru99.com/must-know-linux-commands.html" target="blank">Learn Linux Basic command</a>
+                            </div>
                         </div>
                     </div>
+                    <hr />
+                    <h3 className="text-center mt-4"><u><span className="blink">(Step - 3)</span> Choose one langauage from the list (Java, Python, NodeJs, PHP, Ruby)</u></h3>
                     <div className="row mb-4 mt-4">
                         <div className="col-md-9">
                             <div className="frontEndBasicimg">
+                                <h2 className="text-center"><u>Roadmap for Python Developer</u></h2>
                                 <img className="img-responsive" src={python} alt="Back End python img" />
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="heading text-center">
-                                <h3><u>First learn basic front end languages</u></h3>
+                            <div className="text-center">
+                                <h3>Follow Step by Step</h3>
                             </div>
                             <div className="collaspebtn">
-                                <a href="https://www.w3schools.com/html/default.asp" target="blank">Learn HTML</a>
+                                <a href="https://www.javatpoint.com/python-tutorial" target="blank"><span className="blink">(Step - 1)</span> Learn Python</a>
                             </div>
                             <div className="collaspebtn mt-3">
-                                <a href="https://www.w3schools.com/css/default.asp" target="blank">Learn CSS</a>
+                                <a href="https://www.w3schools.com/python/python_pip.asp" target="blank"><span className="blink">(Step - 2)</span> Learn python Package Manager (pip)</a>
                             </div>
                             <div className="collaspebtn mt-3">
-                                <a href="https://www.w3schools.com/js/default.asp" target="blank">Learn JavaScript</a>
+                                <a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/" target="blank"><span className="blink">(Step - 3)</span> Learn python Framework (Django)</a>
                             </div>
                             <div className="collaspebtn mt-3">
-                                <a href="https://www.w3schools.com/jquery/default.asp" target="blank">Learn Jquery</a>
+                                <a href="https://www.tutorialspoint.com/unittest_framework/unittest_framework_overview.htm" target="blank"><span className="blink">(Step - 4)</span> Learn python Testing (pyUnit)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="roadmapHR" />
+                    <div className="row mb-4 mt-4">
+                        <div className="col-md-3">
+                            <div className="text-center">
+                                <h3>Follow Step by Step</h3>
+                            </div>
+                            <div className="collaspebtn">
+                                <a href="https://www.javatpoint.com/nodejs-tutorial" target="blank"><span className="blink">(Step - 1)</span> Learn NodeJs</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.w3schools.com/nodejs/nodejs_npm.asp" target="blank"><span className="blink">(Step - 2)</span> Learn NodeJs Package Manager (npm)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/expressjs-tutorial" target="blank"><span className="blink">(Step - 3)</span> Learn NodeJs Framework (ExpressJs)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://mochajs.org/" target="blank"><span className="blink">(Step - 4)</span> Learn NodeJs Testing (Mocha)</a>
+                            </div>
+                        </div>
+                        <div className="col-md-9">
+                            <div className="frontEndBasicimg">
+                                <h2 className="text-center"><u>Roadmap for NodeJs Developer</u></h2>
+                                <img className="img-responsive" src={NodeJs} alt="Back End python img" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="roadmapHR" />
+                    <div className="row mb-4 mt-4">
+                        <div className="col-md-9">
+                            <div className="frontEndBasicimg">
+                                <h2 className="text-center"><u>Roadmap for PHP Developer</u></h2>
+                                <img className="img-responsive" src={PHP} alt="Back End python img" />
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div className="text-center">
+                                <h3>Follow Step by Step</h3>
+                            </div>
+                            <div className="collaspebtn">
+                                <a href="https://www.javatpoint.com/php-tutorial" target="blank"><span className="blink">(Step - 1)</span> Learn PHP</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://getcomposer.org/doc/" target="blank"><span className="blink">(Step - 2)</span> Learn PHP Package Manager (Composer)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/laravel" target="blank"><span className="blink">(Step - 3)</span> Learn PHP Framework (Laravel)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://phpunit.de/documentation.html" target="blank"><span className="blink">(Step - 4)</span> Learn PHP Testing (PHPUnit)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="roadmapHR" />
+                    <div className="row mb-4 mt-4">
+                        <div className="col-md-3">
+                            <div className="text-center">
+                                <h3>Follow Step by Step</h3>
+                            </div>
+                            <div className="collaspebtn">
+                                <a href="https://www.javatpoint.com/ruby-tutorial" target="blank"><span className="blink">(Step - 1)</span> Learn Ruby</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://guides.rubygems.org/make-your-own-gem/" target="blank"><span className="blink">(Step - 2)</span> Learn Ruby Package Manager (RubyGems)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.javatpoint.com/ruby-on-rails-tutorial" target="blank"><span className="blink">(Step - 3)</span> Learn Ruby Framework (Ruby on Rails)</a>
+                            </div>
+                            <div className="collaspebtn mt-3">
+                                <a href="https://www.tutorialspoint.com/rspec/index.htm" target="blank"><span className="blink">(Step - 4)</span> Learn Ruby Testing (RSpec)</a>
+                            </div>
+                        </div>
+                        <div className="col-md-9">
+                            <div className="frontEndBasicimg">
+                                <h2 className="text-center"><u>Roadmap for Ruby Developer</u></h2>
+                                <img className="img-responsive" src={Ruby} alt="Back End python img" />
                             </div>
                         </div>
                     </div>
