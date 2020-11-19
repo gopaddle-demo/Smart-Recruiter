@@ -1,6 +1,7 @@
 import React from 'react'
 import Base from '../../Base'
 import '../../css/StudentDashBoard.css';
+import { Link } from 'react-router-dom';
 
 export default function BasicWebDevelopment() {
     return (
@@ -8,10 +9,10 @@ export default function BasicWebDevelopment() {
             <div className="basic_webDev pb-6">
                 <div className="container-fluid">
                     <div className="row align-items-center pt-4">
-                        <div className="col-lg-6 col-7">
+                        <div className="col-md-12 col-6">
                             <nav aria-label="breadcrumb" className="d-none d-md-inline-block">
                                 <ol className="breadcrumb breadcrumb-links breadcrumb-dark">
-                                    <li className="breadcrumb-item">Basic of Web Development</li>
+                                    <li className="breadcrumb-item"> <Link to="/RoadmapsHome">Roadmaps</Link> / <Link to="/WebDevelopment">Web Development</Link> / Basic of Web Development</li>
                                 </ol>
                             </nav>
                         </div>

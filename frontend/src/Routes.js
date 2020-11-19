@@ -19,6 +19,10 @@ import EditProfile from './Student/Profile/EditProfile';
 import WebDevelopment from './Student/Roadmaps/WebDevelopment/WebDevelopment';
 import BasicWebDevelopment from './Student/Roadmaps/WebDevelopment/BasicWebDevelopment';
 import FrontEndWebDevelopment from './Student/Roadmaps/WebDevelopment/FrontEndWebDevelopment';
+import git_and_github from './Student/Roadmaps/WebDevelopment/git_and_github';
+import BackEndWebDevelopment from './Student/Roadmaps/WebDevelopment/BackEndWebDevelopment';
+import CompetitiveCodingIndex from './Student/Roadmaps/CompetitiveProgramming/CompetitiveCodingIndex';
+import CompetitiveBasic from './Student/Roadmaps/CompetitiveProgramming/CompetitiveBasic';
 
 const Routes = () =>{
     return(
@@ -42,6 +46,10 @@ const Routes = () =>{
                     <Route path="/WebDevelopment" exact component={WebDevelopment}></Route>
                     <Route path="/WebDevelopment/Basic" exact component={BasicWebDevelopment}></Route>
                     <Route path="/WebDevelopment/Front-End-Web-Development" exact component={FrontEndWebDevelopment}></Route>
+                    <Route path="/WebDevelopment/BackEndWebDevelopment" exact component={BackEndWebDevelopment}></Route>
+                    <Route path="/WebDevelopment/git_and_github" exact component={git_and_github}></Route>
+                    <Route path="/CompetitiveProgramming" exact component={CompetitiveCodingIndex}></Route>
+                    <Route path="/CompetitiveProgramming/Basic" exact component={CompetitiveBasic}></Route>
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>

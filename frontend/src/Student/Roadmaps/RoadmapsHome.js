@@ -38,16 +38,18 @@ const RoadmapsHome = () => {
                                 </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
-                                <div className="mycard card-stats">
-                                    <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-md-12">
-                                                <h4 className="card-title text-uppercase text-muted mb-0">Roadmap for</h4>
-                                                <span className="h2 font-weight-bold mb-0">Competitive Programming</span>
+                                <Link to="/CompetitiveProgramming">
+                                    <div className="mycard card-stats">
+                                        <div className="card-body">
+                                            <div className="row">
+                                                <div className="col-md-12">
+                                                    <h4 className="card-title text-uppercase text-muted mb-0">Roadmap for</h4>
+                                                    <span className="h2 font-weight-bold mb-0 text-dark">Competitive Programming</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
                                 <div className="mycard card-stats">
