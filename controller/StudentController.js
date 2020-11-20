@@ -2,7 +2,7 @@
     *require Modules  
 ------------------------------------------------------*/
 const router = require('express').Router();
-// const session = require('express-session');
+//const session = require('express-session');
 const bodyparser = require('body-parser');
 const bcryptjs = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
@@ -14,7 +14,6 @@ const EmailAuthentication = require('./EmailAuthentication');
 router.use(bodyparser.json());
 router.use(bodyparser.urlencoded({ extended: true }));
 router.use('/emailauthentication', EmailAuthentication);
-
 router.get('/', (req, res) => {
     return res.send('Student Module Working fine....');
 })
@@ -109,8 +108,6 @@ router.post('/StudentLogin',
                             msg: 'Invalid Password'
                         });
                     } else {
-                        // sessStore = req.session;
-                        // sessStore.email = req.body.email;
                         return res.status(200).json({
                             status: true,
                             msg: 'Login Sucessfully....',

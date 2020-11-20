@@ -16,7 +16,7 @@ const EditProfile = () => {
         error: false,
         redirect: false,
         loading: false,
-        msg: ""
+        msg: "",
     });
 
     const { name, email, enrollment_id, branch, mobile_number, year_of_passing, error, redirect, loading, msg } = editStudent;
@@ -102,7 +102,7 @@ const EditProfile = () => {
 
     useEffect(() => {
         getStudentFromLocal()
-    }, []);
+    },[]);
     return (
         <Base>
             <div className="header bg-main pb-6">

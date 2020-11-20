@@ -36,11 +36,11 @@ const Profile = () => {
                             <div className="row">
                                 <div className="col-xl-8 offset-2">
                                     <div className="card card-profile">
-                                        <img src={profilebg} alt="Image placeholder" className="card-img-top" height="200px" />
+                                        <img src={profilebg} alt="Background Img" className="card-img-top" height="200px"/>
                                         <div className="row justify-content-center">
                                             <div className="col-lg-3 order-lg-2">
                                                 <div className="card-profile-image">
-                                                    <img src={profileImg} className="rounded-circle" />
+                                                    <img src={profileImg} className="rounded-circle" alt="profile pic"/>
                                                 </div>
                                             </div>
                                         </div>

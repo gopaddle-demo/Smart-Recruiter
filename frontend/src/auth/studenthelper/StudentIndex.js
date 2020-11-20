@@ -99,3 +99,24 @@ export const updateProfile = student => {
             console.log(err);
         })
 }
+
+/** **************************
+ * Student Auth API 
+*******************************/
+export const isAuthenticated = () => {
+    if(typeof window === undefined)
+        return false;
+    if(localStorage.getItem('student'))
+        return true;
+    else
+        return false;
+}
+
+/** **************************
+ * Student Logout API 
+*******************************/
+export const StudentLogout = () =>{
+    if(typeof window !== undefined){
+        localStorage.clear();
+    }
+}
