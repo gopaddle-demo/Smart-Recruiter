@@ -61,7 +61,7 @@ export default function CompetitiveBasic() {
                                 <div className="customcard">
                                     Before writing a solution to code learn what is Brute force method and make Google your friend to search for these concepts.
                                     <br />
-                                    <a href="#xyz" target="blank">Know More by Watching video</a>
+                                    <a href="https://www.freecodecamp.org/news/brute-force-algorithms-explained/#:~:text=The%20brute%20force%20solution%20is%20simply%20to%20calculate,%28mn%29%2C%20which%20is%20sometimes%20written%20as%20O%20%28n%2Am%29." target="blank">Know More by Watching video</a>
                                 </div>
                             </div>
                         </div>
@@ -78,17 +78,36 @@ export default function CompetitiveBasic() {
                             </div>
                         </div>
 
-                        <div className="col-md-12 col-12 mt-3">
+                        <div className="col-md-6 col-12 mt-3">
                             <div className="collaspebtn" data-toggle="collapse" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                            Take the challenge and Solve Coding Problems
-                                </div>
+                                Keep Practicing !!
+                            </div>
                             <div className="collapse" id="collapse6">
+                                <div className="customcard">
+                                    
+                                <br />
+                                    <a href="https://practice.geeksforgeeks.org/" target="blank">Click to know more</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col-md-12 col-12 mt-3">
+                            <div className="collaspebtn" data-toggle="collapse" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                Take the challenge and Solve Coding Problems
+                                </div>
+                            <div className="collapse" id="collapse7">
                                 <div className="customcard">
                                     <ul>
                                         <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
                                         <li>Pick a coding platform to participate in contests.</li>
                                         <li>And Make a Google sheet to track all the coding questions you practice. "trust me this helps."</li>
-                                        <li>If you are looking for the resources of these coding platforms so a lot of sites are there like Codechef, Codeforces, Topcoder, SPOJ</li>
+                                        <li>If you are looking for the resources of these coding platforms so a lot of sites are there like
+                                            <a href="https://www.codechef.com/" > Codechef </a>,
+                                            <a href="https://codeforces.com/">Codeforces</a>,
+                                            <a href="https://www.topcoder.com/">Topcoder</a>,
+                                            <a href="https://www.spoj.com/problems/classical/">SPOJ </a>
+                                        </li>
                                     </ul>
                                     <a href="https://www.youtube.com/watch?v=H7bDwI5nUl8" target="blank">Know More by Watching video</a>
                                 </div>
