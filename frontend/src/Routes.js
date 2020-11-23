@@ -27,6 +27,12 @@ import CompetitiveRoadmap from './Student/Roadmaps/CompetitiveProgramming/Compet
 import DataStructures from './Student/Roadmaps/CompetitiveProgramming/DataStructures';
 import Algorithms from './Student/Roadmaps/CompetitiveProgramming/Algorithms';
 import PrivateRoute from './auth/privateRoute/PrivateRoute';
+import AlumniIndex from './Student/Alumni/AlumniIndex';
+import FirstYear from './Student/Years/FirstYear';
+import SecondYear from './Student/Years/SecondYear';
+import ThirdYear from './Student/Years/ThirdYear';
+import FourthYear from './Student/Years/FourthYear';
+
 
 const Routes = () =>{
     return(
@@ -57,6 +63,12 @@ const Routes = () =>{
                     <PrivateRoute path="/CompetitiveProgramming/Roadmap" exact component={CompetitiveRoadmap} />
                     <PrivateRoute path ="/CompetitiveProgramming/DataStruture" exact component={DataStructures} />
                     <PrivateRoute path ="/CompetitiveProgramming/Algorithms" exact component={Algorithms}/>
+                    <PrivateRoute path ="/StudentAlumni" exact component={AlumniIndex}/>
+                    <PrivateRoute path="/Year/FirstYear" exact component={FirstYear} />
+                    <PrivateRoute path ="/Year/SecondYear" exact component={SecondYear} />
+                    <PrivateRoute path ="/Year/ThirdYear" exact component={ThirdYear}/>
+                    <PrivateRoute path ="/Year/FourthYear" exact component={FourthYear}/>
+                    
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>

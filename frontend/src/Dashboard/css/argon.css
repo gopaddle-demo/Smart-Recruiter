@@ -2679,7 +2679,6 @@ pre code
     color: black;
     outline: 0;
     border-color: rgba(50, 50, 9, 0.02);
-    background-color: rgba(50, 50, 9, 0.02);
     box-shadow: 1px 4px 9px rgba(0, 0, 0,0.14);
 }
 .form-control::-ms-input-placeholder
