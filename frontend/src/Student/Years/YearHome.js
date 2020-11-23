@@ -19,7 +19,7 @@ const YearHome = () => {
                         </div>
                         <div className="row mb-2">
                             <div className="col-lg-12 text-white">
-                                <h2>Learn new things in ease way</h2>
+                                <h2>Things to learn in your college years</h2>
                             </div>
                         </div>
                         <div className="row">
