@@ -17,19 +17,19 @@ export default function CompetitiveBasic() {
                             </nav>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" id="cpbasicgroup">
                         <div className="col-md-6 col-12 mt-2">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                 Learn the art of writing code
                                 </div>
-                            <div className="collapse" id="collapse1">
+                            <div className="collapse show" id="collapse1">
                                 <div className="customcard">
                                     Before beginning with practicing code learn to think about the "Art of writing code". It means to learn how problems are to be solved.
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-2">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                 Choose a programming language.
                                 </div>
                             <div className="collapse" id="collapse2">
@@ -42,7 +42,7 @@ export default function CompetitiveBasic() {
                         </div>
 
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                 Try to practice time and space complexity concepts.
                                 </div>
                             <div className="collapse" id="collapse3">
@@ -54,7 +54,7 @@ export default function CompetitiveBasic() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                 Write a Brute Force Solution.
                             </div>
                             <div className="collapse" id="collapse4">
@@ -66,7 +66,7 @@ export default function CompetitiveBasic() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                 Practice Data Structures.
                             </div>
                             <div className="collapse" id="collapse5">
@@ -79,13 +79,13 @@ export default function CompetitiveBasic() {
                         </div>
 
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                 Keep Practicing !!
                             </div>
                             <div className="collapse" id="collapse6">
                                 <div className="customcard">
-                                    
-                                <br />
+
+                                    <br />
                                     <a href="https://practice.geeksforgeeks.org/" target="blank">Click to know more</a>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ export default function CompetitiveBasic() {
 
 
                         <div className="col-md-12 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                 Take the challenge and Solve Coding Problems
                                 </div>
                             <div className="collapse" id="collapse7">
@@ -110,6 +110,21 @@ export default function CompetitiveBasic() {
                                         </li>
                                     </ul>
                                     <a href="https://www.youtube.com/watch?v=H7bDwI5nUl8" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 col-12 mt-3">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                Follow the DataStructure Roadmaps given below
+                                </div>
+                            <div className="collapse" id="collapse8">
+                                <div className="customcard">
+                                    <ul>
+                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
+                                    </ul>
+                                    <li><Link to="/CompetitiveProgramming/DataStruture">Roadmaps For DSA Beginner</Link></li>
+                                    <li><Link to="/CompetitiveProgramming/Algorithms">Roadmaps For DSA Advanced</Link></li>
                                 </div>
                             </div>
                         </div>

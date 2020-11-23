@@ -24,6 +24,8 @@ import BackEndWebDevelopment from './Student/Roadmaps/WebDevelopment/BackEndWebD
 import CompetitiveCodingIndex from './Student/Roadmaps/CompetitiveProgramming/CompetitiveCodingIndex';
 import CompetitiveBasic from './Student/Roadmaps/CompetitiveProgramming/CompetitiveBasic';
 import CompetitiveRoadmap from './Student/Roadmaps/CompetitiveProgramming/CompetitiveRoadmap';
+import DataStructures from './Student/Roadmaps/CompetitiveProgramming/DataStructures';
+import Algorithms from './Student/Roadmaps/CompetitiveProgramming/Algorithms';
 import PrivateRoute from './auth/privateRoute/PrivateRoute';
 
 const Routes = () =>{
@@ -53,6 +55,8 @@ const Routes = () =>{
                     <PrivateRoute path="/CompetitiveProgramming" exact component={CompetitiveCodingIndex} />
                     <PrivateRoute path="/CompetitiveProgramming/Basic" exact component={CompetitiveBasic} />
                     <PrivateRoute path="/CompetitiveProgramming/Roadmap" exact component={CompetitiveRoadmap} />
+                    <PrivateRoute path ="/CompetitiveProgramming/DataStruture" exact component={DataStructures} />
+                    <PrivateRoute path ="/CompetitiveProgramming/Algorithms" exact component={Algorithms}/>
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>
