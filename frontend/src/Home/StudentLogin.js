@@ -119,7 +119,7 @@ const StudentLogin = () => {
                             localStore("student", data.data, ()=>{
                                 setStudent({
                                     ...Student,
-                                    didredirect: true
+                                    didredirect: true,
                                 })
                             })
                         } else {

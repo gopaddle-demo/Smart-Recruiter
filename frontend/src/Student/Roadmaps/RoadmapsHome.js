@@ -12,13 +12,13 @@ const RoadmapsHome = () => {
                             <div className="col-lg-6 col-7">
                                 <nav aria-label="breadcrumb" className="d-none d-md-inline-block">
                                     <ol className="breadcrumb breadcrumb-links breadcrumb-dark">
-                                        <li className="breadcrumb-item">ROADMAPS</li>
+                                        <li className="breadcrumb-item">Roadmaps</li>
                                     </ol>
                                 </nav>
                             </div>
                         </div>
                         <div className="row mb-2">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 text-white">
                                 <h2>Learn new things in ease way</h2>
                             </div>
                         </div>
@@ -87,7 +87,6 @@ const RoadmapsHome = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

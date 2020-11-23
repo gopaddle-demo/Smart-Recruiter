@@ -1,21 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import Navigation from './Navigation';
 import { getlocalstore } from '../auth/helper';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { StudentLogout } from '../auth/studenthelper/StudentIndex';
 
 const Base = ({
     children
 }) => {
 
     const [name, setName] = useState([]);
-
+    const [didredirect, setdidredirect] = useState(false);
     const getStudentDetailsFromLocal = () => {
         if (getlocalstore("student"))
             setName(getlocalstore("student"));
     }
+
+    const redirect = () => {
+        return (
+            didredirect && (
+                <Redirect to="/StudentLogin" />
+            )
+        )
+    }
+
+    const logout = () => {
+        StudentLogout();
+        setdidredirect({
+            didredirect: true
+        })
+    }
     useEffect(() => {
         getStudentDetailsFromLocal()
     }, []);
+
 
     return (
         <div>
@@ -29,6 +46,7 @@ const Base = ({
                     <Navigation />
                 </div>
             </nav>
+            {redirect()}
             <div className="main-content" id="panel">
                 <nav className="navbar navbar-top navbar-expand navbar-dark bg-main border-bottom">
                     <div className="container-fluid">
@@ -77,10 +95,10 @@ const Base = ({
                                             </button>
                                         </Link>
                                         <div class="dropdown-divider"></div>
-                                        <a href="#!" class="dropdown-item">
+                                        <button class="dropdown-item" onClick={logout}>
                                             <i class="ni ni-user-run"></i>
                                             <span>Logout</span>
-                                        </a>
+                                        </button>
                                     </div>
                                 </li>
                             </ul>
