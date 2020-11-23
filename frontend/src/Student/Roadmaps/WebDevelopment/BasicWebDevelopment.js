@@ -17,19 +17,19 @@ export default function BasicWebDevelopment() {
                             </nav>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" id="basicwebgroup">
                         <div className="col-md-6 col-12">
-                            <div className="collaspebtn" data-toggle="collapse" href="#internet" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#basicwebgroup" href="#internet" aria-expanded="false" aria-controls="internet">
                                 What is Internet?
                                 </div>
-                            <div className="collapse" id="internet">
+                            <div className="collapse show" id="internet">
                                 <div className="customcard">
                                     The Internet is a global computer network for communication – actually nothing more than a basic computer network. The Internet simply moves data from one place to another, so that we can chat, browse and share. There are millions upon millions of servers on the Internet.
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6 col-12">
-                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#basicwebgroup" href="#http" aria-expanded="false" aria-controls="internet">
                                 How does the Internet work?
                                 </div>
                             <div className="collapse" id="http">
@@ -41,7 +41,7 @@ export default function BasicWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#dns" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#basicwebgroup" href="#dns" aria-expanded="false" aria-controls="internet">
                                 What is HTTP?
                                 </div>
                             <div className="collapse" id="dns">
@@ -56,7 +56,7 @@ export default function BasicWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#browser" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#basicwebgroup" href="#browser" aria-expanded="false" aria-controls="internet">
                                 How browser works step by step?
                                 </div>
                             <div className="collapse" id="browser">
