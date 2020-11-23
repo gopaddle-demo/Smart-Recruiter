@@ -27,7 +27,7 @@ export default function Datastructures() {
                             <div className="collaspebtn" data-toggle="collapse" href="#backcollapse1" aria-expanded="false" aria-controls="backcollapse1">
                                 <center><span className="blink"> Syllabus</span></center>
                             </div>
-                            <div className="collapse" id="backcollapse1">
+                            <div className="collapse show" id="backcollapse1">
                                 <div className="customcard">
                                     <li>1. Basic Data Structures: Arrays, Strings, Stacks, Queues</li>
                                     <li>2. Asymptotic analysis (Big-O notation)</li>

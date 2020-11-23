@@ -18,7 +18,7 @@ export default function CompetitiveCodingIndex() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-xl-4 col-md-6">
+                            <div className="col-xl-4 col-md-6 mt-2">
                                 <Link to="/CompetitiveProgramming/Basic">
                                     <div className="mycard card-stats">
                                         <div className="card-body">
@@ -34,7 +34,7 @@ export default function CompetitiveCodingIndex() {
                                 </Link>
                             </div>
 
-                            <div className="col-xl-4 col-md-6">
+                            <div className="col-xl-4 col-md-6 mt-2">
                                 <Link to="/CompetitiveProgramming/Roadmap">
                                     <div className="mycard card-stats">
                                         <div className="card-body">
@@ -49,14 +49,14 @@ export default function CompetitiveCodingIndex() {
                                 </Link>
                             </div>
 
-                            <div className="col-xl-4 col-md-6">
+                            <div className="col-xl-4 col-md-6 mt-2">
                                 <Link to="/CompetitiveProgramming/DataStruture">
                                     <div className="mycard card-stats">
                                         <div className="card-body">
                                             <div className="row">
                                                 <button className="col-md-12">
                                                     <h4 className="card-title text-uppercase text-muted mb-0"><span className="blink"> (Step - 3)  </span></h4>
-                                                    <span className="h2 font-weight-bold mb-0">Roadmap of Data Structures (Level - Beginner).</span>
+                                                    <span className="h2 font-weight-bold mb-0">Data Structures (Beginner)</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -64,14 +64,14 @@ export default function CompetitiveCodingIndex() {
                                 </Link>
                             </div>
                             <br />
-                            <div className="col-xl-4 col-md-6">
+                            <div className="col-xl-4 col-md-6 mt-3">
                                 <Link to="/CompetitiveProgramming/Algorithms">
                                     <div className="mycard card-stats">
                                         <div className="card-body">
                                             <div className="row">
                                                 <button className="col-md-12">
                                                     <h4 className="card-title text-uppercase text-muted mb-0"><span className="blink"> (Step - 4)  </span></h4>
-                                                    <span className="h2 font-weight-bold mb-0">Roadmap of Data Structures & Algorithms (Level - Advanced).</span>
+                                                    <span className="h2 font-weight-bold mb-0">D.S.A (Level - Advanced)</span>
                                                 </button>
                                             </div>
                                         </div>

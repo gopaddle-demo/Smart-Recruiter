@@ -25,7 +25,7 @@ export default function Algorithms() {
                             <div className="collaspebtn" data-toggle="collapse" href="#backcollapse1" aria-expanded="false" aria-controls="backcollapse1">
                                 <center><span className="blink"> Syllabus</span></center>
                             </div>
-                            <div className="collapse" id="backcollapse1">
+                            <div className="collapse show" id="backcollapse1">
                                 <div className="customcard">
                                     Everything in the Foundation Level, along with:
                                     <li>1. Heaps (priority queue)</li>
