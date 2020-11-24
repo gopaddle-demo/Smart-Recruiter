@@ -35,6 +35,7 @@ const AlumniIndex = () => {
             AlumniData(course)
                 .then(res => {
                     console.log(res);
+                    alert(res + " " + res.status);
                     if (res.status === true) {
                         setAlumniData(res.exdata);
                         setData({ ...Data, loading: false });
