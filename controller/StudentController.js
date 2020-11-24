@@ -262,7 +262,10 @@ router.get('/convertExcelToJson/:branch', (req, res) => {
                 H: "WorkingIn"
             }
         })
-        res.send(exceldata);
+        res.json({
+            status: true,
+            exdata: exceldata.Sheet1
+        })
     }
 });
 
