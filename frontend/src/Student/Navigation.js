@@ -25,6 +25,12 @@ const Navigation = ({ history, path }) => {
                         </div>
                     </li>
                     <li className="nav-item">
+                        <div className="nav-link" style={currenttab(history, "/StudentAlumni")}>
+                            <i className="ni ni-circle-08 text-default"></i>
+                            <span className="nav-link-text"><Link to="/StudentAlumni">Alumni</Link></span>
+                        </div>
+                    </li>
+                    <li className="nav-item">
                         <div className="nav-link" style={currenttab(history, "/YearHome")}>
                             <i className="ni ni-circle-08 text-default"></i>
                             <span className="nav-link-text"><Link to="/YearHome">Select Year</Link></span>

@@ -75,7 +75,7 @@ const Company = () => {
             error && (
                 <div className="row">
                     <div className="col-md-12 alert alert-danger">
-                        <h5>{values.errmsg}</h5>
+                        <h5>{errmsg}</h5>
                     </div>
                 </div>
             )

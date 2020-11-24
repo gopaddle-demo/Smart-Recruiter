@@ -41,19 +41,6 @@ export const admin_logout = () => {
             console.log(err);
         })
 }
-/** **************************
- * Admin Logout API 
-*******************************/
-export const isAuthenticated = (val) => {
-    if (val === "login") {
-        alert(val);
-        return true;
-    }
-    else if (val === "logout") {
-        alert(val);
-        return false;
-    }
-}
 
 /** ************************************
  * Add Company Details API

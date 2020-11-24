@@ -119,7 +119,7 @@ const StudentLogin = () => {
                             localStore("student", data.data, ()=>{
                                 setStudent({
                                     ...Student,
-                                    didredirect: true
+                                    didredirect: true,
                                 })
                             })
                         } else {
@@ -144,7 +144,7 @@ const StudentLogin = () => {
                 alert("please enter enrollment id");
             } else if (branch === "") {
                 alert("please select branch");
-            } else if (mobile_number.length !== 10) {
+            } else if (mobile_number.length !== 10 && mobile_number.length>10) {
                 alert("please enter valid mobile number");
             } else if (year_of_passing === "") {
                 alert("please enter your year of passing");

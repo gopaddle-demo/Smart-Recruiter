@@ -2,8 +2,9 @@
     *require Modules  
 ------------------------------------------------------*/
 const router = require('express').Router();
-// const session = require('express-session');
+//const session = require('express-session');
 const bodyparser = require('body-parser');
+const excelToJson = require('convert-excel-to-json');
 const bcryptjs = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
 const student_model = require('../DataBase/models/student_model');
@@ -14,7 +15,6 @@ const EmailAuthentication = require('./EmailAuthentication');
 router.use(bodyparser.json());
 router.use(bodyparser.urlencoded({ extended: true }));
 router.use('/emailauthentication', EmailAuthentication);
-
 router.get('/', (req, res) => {
     return res.send('Student Module Working fine....');
 })
@@ -109,8 +109,6 @@ router.post('/StudentLogin',
                             msg: 'Invalid Password'
                         });
                     } else {
-                        // sessStore = req.session;
-                        // sessStore.email = req.body.email;
                         return res.status(200).json({
                             status: true,
                             msg: 'Login Sucessfully....',
@@ -229,6 +227,47 @@ router.put('/updateprofile',
         })
     }
 )
+
+/**********************************
+ * Convert Excel to Json
+ ***********************************/
+router.get('/convertExcelToJson/:branch', (req, res) => {
+    var excel_source = null;
+    if (req.params.branch === 'BCA_and_MCA') {
+        excel_source = process.env.EXCEL_PATH + 'BCA_and_MCA.xlsx';
+    } else if (req.params.branch === 'BSC_CS') {
+        excel_source = process.env.EXCEL_PATH + 'BSC_ComputerScience.xlsx';
+    } else if (req.params.branch === 'BSC_CS_and_IT') {
+        excel_source = process.env.EXCEL_PATH + 'BSC_cs_and_IT.xlsx';
+    } else if (req.params.branch === 'BTECH_CS') {
+        excel_source = process.env.EXCEL_PATH + 'BTECH_cs.xlsx';
+    } else if (req.params.branch === 'BTECH_IT') {
+        excel_source = process.env.EXCEL_PATH + 'BTECH_IT.xlsx';
+    } else if (req.params.branch === 'MTECH_CS') {
+        excel_source = process.env.EXCEL_PATH + 'MTECH_cs.xlsx';
+    }
+    //if Invalid URL
+    if (excel_source === null) {
+        res.send('Invalid URL');
+    } else {
+        const exceldata = excelToJson({
+            sourceFile: excel_source,
+            columnToKey: {
+                A: "Name",
+                B: "Year",
+                C: "Email",
+                D: "PhoneNumber",
+                E: "Country",
+                G: "State",
+                H: "WorkingIn"
+            }
+        })
+        res.json({
+            status: true,
+            exdata: exceldata.Sheet1
+        })
+    }
+});
 
 //exports module
 module.exports = router;

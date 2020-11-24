@@ -23,12 +23,12 @@ export default function BackEndWebDevelopment() {
                         </div>
                     </div>
                     <h3 className="text-center"><u><span className="blink">(Step - 1)</span> Before Learning Back End Development get familier with back end terminologies</u></h3>
-                    <div className="row mt-2 mb-4">
+                    <div className="row mt-2 mb-4" id="Backgroup">
                         <div className="col-md-6 col-12 mt-2">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse1" aria-expanded="false" aria-controls="backcollapse1">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse1" aria-expanded="false" aria-controls="backcollapse1">
                                 What is web server ?
                                 </div>
-                            <div className="collapse" id="backcollapse1">
+                            <div className="collapse show" id="backcollapse1">
                                 <div className="customcard">
                                     A web server is server software, or hardware dedicated to running this software, that can satisfy client requests on the World Wide Web. A web server can, in general, contain one or more websites. A web server processes incoming network requests over HTTP and several other related protocols.
                                     <br />
@@ -37,7 +37,7 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-2">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse2" aria-expanded="false" aria-controls="backcollapse2">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse2" aria-expanded="false" aria-controls="backcollapse2">
                                 What is RESTful API's ?
                                 </div>
                             <div className="collapse" id="backcollapse2">
@@ -50,7 +50,7 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse3" aria-expanded="false" aria-controls="backcollapse3">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse3" aria-expanded="false" aria-controls="backcollapse3">
                                 What is MVC ?
                                 </div>
                             <div className="collapse" id="backcollapse3">
@@ -62,7 +62,7 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse4" aria-expanded="false" aria-controls="backcollapse4">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse4" aria-expanded="false" aria-controls="backcollapse4">
                                 What is oAuth 2.0 ?
                                 </div>
                             <div className="collapse" id="backcollapse4">
@@ -74,7 +74,7 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse5" aria-expanded="false" aria-controls="backcollapse5">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse5" aria-expanded="false" aria-controls="backcollapse5">
                                 What is Database and different b/w Relational and Nosql DB ?
                                 </div>
                             <div className="collapse" id="backcollapse5">
@@ -85,7 +85,7 @@ export default function BackEndWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" href="#backcollapse6" aria-expanded="false" aria-controls="backcollapse6">
+                            <div className="collaspebtn" data-toggle="collapse" data-parent="#Backgroup" href="#backcollapse6" aria-expanded="false" aria-controls="backcollapse6">
                                 Back end langauages and framework ?
                                 </div>
                             <div className="collapse" id="backcollapse6">

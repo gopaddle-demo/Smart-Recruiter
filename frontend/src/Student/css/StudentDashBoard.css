@@ -87,3 +87,17 @@
       opacity: 0;
     }
 }
+
+.alumniinputfield{
+    box-shadow: 6px 5px 6px 1px rgb(0,0,0,0.4);
+    padding: 4px;
+    padding-left: 10px;
+    border-radius: 16px;
+    transition: .6s;
+}
+.alumniinputfield:focus{
+    transform: skewX(-13deg);
+    background: orangered;
+    color: white;
+    font-weight: 700;
+}
