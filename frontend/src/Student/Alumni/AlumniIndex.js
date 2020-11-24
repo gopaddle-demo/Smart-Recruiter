@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
 import Base from '../Base';
 import { AlumniData } from '../../auth/studenthelper/StudentIndex';
+import '../css/StudentDashBoard.css';
 
 const AlumniIndex = () => {
 
     const [Data, setData] = useState({
         course: "",
-        loading: false
+        loading: false,
     });
 
     const [alumniDatadisplay, setAlumniData] = useState([]);
+    const [alumniSearch, setalumniSearch] = useState("");
     const { course, loading } = Data;
 
     const handleChange = (val) => (event) => {
         setData({ ...Data, [val]: event.target.value });
+    }
+
+    const searchHandler = () => (e) => {
+        setalumniSearch(e.target.value);
     }
 
     const loadingmsg = () => {
@@ -47,6 +53,10 @@ const AlumniIndex = () => {
                 })
         }
     }
+
+    const filteralumni = alumniDatadisplay.filter(alu => {
+        return alu.Email.includes(alumniSearch);
+    })
 
     return (
         <Base>
@@ -86,7 +96,14 @@ const AlumniIndex = () => {
             <div className="container-fluid mt--6">
                 <div className="card bg-default shadow">
                     <div className="card-header bg-transparent border-0">
-                        <h3 className="text-white mb-0">Alumni Data</h3>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <h3 className="text-white mb-0">Alumni Data</h3>
+                            </div>
+                            <div className="col-md-6 text-right">
+                                <input className="alumniinputfield" type="text" placeholder="Search by Email or Name" value={alumniSearch} onChange={searchHandler("alumniSearch")} />
+                            </div>
+                        </div>
                     </div>
                     <div className="table-responsive">
                         <div className="table align-items-center table-dark table-hover">
@@ -104,7 +121,7 @@ const AlumniIndex = () => {
                             <tbody>
                                 {loadingmsg()}
                                 {
-                                    alumniDatadisplay.map((data, index) => {
+                                    filteralumni.map((data, index) => {
                                         return (
                                             <tr key={index}>
                                                 <td>{data.Name}</td>
