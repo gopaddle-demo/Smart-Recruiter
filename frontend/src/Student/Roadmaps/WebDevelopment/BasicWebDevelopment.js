@@ -19,7 +19,7 @@ export default function BasicWebDevelopment() {
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-12">
-                            <div className="collaspebtn" data-toggle="collapse" href="#internet" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" href="#internet" aria-expanded="false" aria-controls="#internet">
                                 What is Internet?
                                 </div>
                             <div className="collapse" id="internet">
@@ -29,7 +29,7 @@ export default function BasicWebDevelopment() {
                             </div>
                         </div>
                         <div className="col-md-6 col-12">
-                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="#http">
                                 How does the Internet work?
                                 </div>
                             <div className="collapse" id="http">
@@ -69,6 +69,86 @@ export default function BasicWebDevelopment() {
                                         <li>Paint the individual nodes to the screen.</li>
                                     </ul>
                                     <a href="https://www.youtube.com/watch?v=5VEDjg9zGEk" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            what is domain ?
+                                </div>
+                            <div className="collapse" id="http">
+                                <div className="customcard">
+                                Domain names are used to identify one or more IP addresses. For example, the domain name microsoft.com represents about a dozen IP addresses. Domain names are used in URLs to identify particular Web pages. For example, in the URL http://www.pcwebopedia.com/index.html, the domain name is pcwebopedia.com
+                                        <br />
+                                    <a href="https://www.youtube.com/watch?v=6epiGBMXBDs" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <div className="collaspebtn" data-toggle="collapse" href="#hosting" aria-expanded="false" aria-controls="#hosting">
+                            what is web hosting ?
+                                </div>
+                            <div className="collapse" id="hosting">
+                                <div className="customcard">
+                                When a hosting provider allocates space on a web server for a website to store its files, they are hosting a website. Web hosting makes the files that comprise a website (code, images, etc.) available for viewing online. Every website you’ve ever visited is hosted on a server. The amount of space allocated on a server to a website depends on the type of hosting. The main types of hosting are shared, dedicated, VPS and reseller. They are differentiated by the kind of technology used for the server, the level of management provided and the additional services on offer.
+                                        <br />
+                                    <a href="https://www.youtube.com/watch?v=6epiGBMXBDs" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            what is web hosting ?
+                                </div>
+                            <div className="collapse" id="http">
+                                <div className="customcard">
+                                When a hosting provider allocates space on a web server for a website to store its files, they are hosting a website. Web hosting makes the files that comprise a website (code, images, etc.) available for viewing online. Every website you’ve ever visited is hosted on a server. The amount of space allocated on a server to a website depends on the type of hosting. The main types of hosting are shared, dedicated, VPS and reseller. They are differentiated by the kind of technology used for the server, the level of management provided and the additional services on offer.
+                                        <br />
+                                    <a href="https://www.youtube.com/watch?v=6epiGBMXBDs" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            what is cloud computing ?
+                                </div>
+                            <div className="collapse" id="http">
+                                <div className="customcard">
+                                Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user. The term is generally used to describe data centers available to many users over the Internet.[1] Large clouds, predominant today, often have functions distributed over multiple locations from central servers. If the connection to the user is relatively close, it may be designated an edge server.
+                                        <br />
+                                    <a href="https://www.youtube.com/watch?v=6epiGBMXBDs" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12 mt-3">
+                            <div className="collaspebtn" data-toggle="collapse" href="#browser" aria-expanded="false" aria-controls="internet">
+                                Technology used in WebDevelopment
+                                </div>
+                            <div className="collapse" id="browser">
+                                <div className="customcard">
+                                    <ul>
+                                        <li>HTML (HyperText Markup Language).</li>
+                                        <li>CSS (Cascading Style Sheets).</li>
+                                        <li>JavaScript.</li>
+                                        <li>Ajax (Asynchronous JavaScript and XML).</li>
+                                        <li>jQuery (JavaScript Framework Library - commonly used in Ajax development).</li>
+                                        <li>MooTools (JavaScript Framework Library - commonly used in Ajax development).</li>
+                                        <li>Dojo Toolkit (JavaScript Framework Library - commonly used in Ajax development).</li>
+                                     
+                                    </ul>
+                                    <a href="https://www.youtube.com/watch?v=5VEDjg9zGEk" target="blank">Know More by Watching video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <div className="collaspebtn" data-toggle="collapse" href="#http" aria-expanded="false" aria-controls="internet">
+                            what is ip address ?
+                                </div>
+                            <div className="collapse" id="http">
+                                <div className="customcard">
+                                An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.[1][2] An IP address serves two main functions: host or network interface identification and location addressing.
+                                        <br />
+                                    <a href="https://www.youtube.com/watch?v=6epiGBMXBDs" target="blank">Know More by Watching video</a>
                                 </div>
                             </div>
                         </div>

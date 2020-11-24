@@ -3,9 +3,9 @@ import Base from '../../Base'
 import '../../css/StudentDashBoard.css';
 import { Link } from 'react-router-dom'
 import python from '../../../images/roadmaps/webDevelopment/BackEnd/python.png';
-import NodeJs from '../../../images/roadmaps/webDevelopment/BackEnd/NodeJs.PNG';
-import PHP from '../../../images/roadmaps/webDevelopment/BackEnd/php.PNG';
-import Ruby from '../../../images/roadmaps/webDevelopment/BackEnd/Ruby.PNG';
+import NodeJs from '../../../images/roadmaps/webDevelopment/BackEnd/NodeJs.png';
+import PHP from '../../../images/roadmaps/webDevelopment/BackEnd/php.png';
+import Ruby from '../../../images/roadmaps/webDevelopment/BackEnd/Ruby.png';
 import SQL from '../../../images/roadmaps/webDevelopment/BackEnd/SQL.png';
 
 export default function BackEndWebDevelopment() {
