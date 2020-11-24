@@ -28,14 +28,13 @@ const AlumniIndex = () => {
         )
     }
     const OnSubmit = () => {
-        if (course === "") {
+        if (course === "***Select Course and Brach***" || course === "") {
             alert('Please select course');
         } else {
             setData({ ...Data, loading: true })
             AlumniData(course)
                 .then(res => {
-                    console.log(res);
-                    alert(res + " " + res.status);
+                    console.log(res + " " + res.status);
                     if (res.status === true) {
                         setAlumniData(res.exdata);
                         setData({ ...Data, loading: false });
@@ -66,7 +65,7 @@ const AlumniIndex = () => {
                                 <div className="row">
                                     <div className="col-md-6 offset-md-4">
                                         <select className="form-control" value={course} onChange={handleChange("course")}>
-                                            <option selected disabled>***Select Course and Brach***</option>
+                                            <option selected>***Select Course and Brach***</option>
                                             <option value="BCA_and_MCA">BCA and MCA</option>
                                             <option value="BSC_CS">BSC (CS)</option>
                                             <option value="BSC_CS_and_IT">BSC (CS and IT)</option>
