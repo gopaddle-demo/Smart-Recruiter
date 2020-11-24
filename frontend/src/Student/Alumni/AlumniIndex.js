@@ -4,20 +4,48 @@ import { AlumniData } from '../../auth/studenthelper/StudentIndex';
 
 const AlumniIndex = () => {
 
-    const[Data ,setData] = useState({
-        course : "",
-        alumni: []
+    const [Data, setData] = useState({
+        course: "",
+        loading: false
     });
 
-    const{course, alumni} = Data;
+    const [alumniDatadisplay, setAlumniData] = useState([]);
+    const { course, loading } = Data;
 
     const handleChange = (val) => (event) => {
         setData({ ...Data, [val]: event.target.value });
     }
 
-    const OnSubmit = () =>{
-        alert(course);
-    
+    const loadingmsg = () => {
+        return (
+            loading && (
+                <div className="row p-3">
+                    <div className="col-md-12">
+                        <h5 className="text-success">Loading....<i class='bx bx-loader bx-spin' ></i></h5>
+                    </div>
+                </div>
+            )
+        )
+    }
+    const OnSubmit = () => {
+        if (course === "") {
+            alert('Please select course');
+        } else {
+            setData({ ...Data, loading: true })
+            AlumniData(course)
+                .then(res => {
+                    console.log(res);
+                    if (res.status === true) {
+                        setAlumniData(res.exdata);
+                        setData({ ...Data, loading: false });
+                    } else {
+                        alert('error in fetching data');
+                    }
+                })
+                .catch(e => {
+                    console.log(e);
+                })
+        }
     }
 
     return (
@@ -55,7 +83,46 @@ const AlumniIndex = () => {
                     </div>
                 </div>
             </div>
-
+            <div className="container-fluid mt--6">
+                <div className="card bg-default shadow">
+                    <div className="card-header bg-transparent border-0">
+                        <h3 className="text-white mb-0">Alumni Data</h3>
+                    </div>
+                    <div className="table-responsive">
+                        <div className="table align-items-center table-dark table-hover">
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>PhoneNumber</th>
+                                    <th>State</th>
+                                    <th>year</th>
+                                    <th>Country</th>
+                                    <th>WorkingIn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {loadingmsg()}
+                                {
+                                    alumniDatadisplay.map((data, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{data.Name}</td>
+                                                <td>{data.Email}</td>
+                                                <td>{data.PhoneNumber}</td>
+                                                <td>{data.State}</td>
+                                                <td>{data.Year}</td>
+                                                <td>{data.Country}</td>
+                                                <td>{data.WorkingIn}</td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Base>
     )
 }
