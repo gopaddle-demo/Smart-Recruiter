@@ -5,6 +5,7 @@ const router = require('express').Router();
 const body_parser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 const company_model = require('../DataBase/models/company_model');
+const company_form = require('../DataBase/models/company_form');
 const ObjectId = require('mongoose').Types.ObjectId;
 
 /** -------------------------
@@ -118,6 +119,71 @@ router.delete('/:id', (req, res) => {
                 res: result
             })
         }
+    });
+});
+
+/*************************************************************************
+ * Company From Section Start API
+ **************************************************************************/
+router.post('/Add_company_form',
+    [
+        check('company_name').not().isEmpty().trim().escape(),
+        check('student_year').not().isEmpty().trim().escape(),
+        check('company_google_link').not().isEmpty().trim(),
+    ],
+    (req, res) => {
+        //check validation Errors
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            return res.json({
+                status: false,
+                msg: 'Invalid Input or any Field is Empty...!',
+                err: error.array()
+            })
+        }
+        company_form.create({
+            company_name: req.body.company_name,
+            student_year: req.body.student_year,
+            company_google_link: req.body.company_google_link,
+        },
+            (err, result) => {
+                //check if error
+                if (err) {
+                    return res.json({
+                        status: false,
+                        msg: 'company Form data already inserted..!',
+                        error: err
+                    })
+                }
+                //if all ok
+                return res.json({
+                    status: true,
+                    msg: 'Details Added Succesfully..',
+                    res: result
+                })
+            }
+        )
+
+    }
+)
+/**************************************
+ * Get Company Form Details API
+ **************************************/
+router.get('/getCompanyFormDetails', (req, res) => {
+    company_form.find((err, data) => {
+        //check if error
+        if (err) {
+            return res.json({
+                status: false,
+                msg: 'Unable to fetch data from Database',
+                error: err
+            })
+        }
+        //if ok
+        return res.json({
+            status: true,
+            data: data,
+        })
     });
 });
 

@@ -1,39 +1,90 @@
 import React, { useState, useEffect } from 'react'
 import Base from './Base';
-import { getlocalstore, get_company_details, localStore } from '../auth/helper';
+import { getlocalstore, get_company_details, localStore, getCompanyFormDetails } from '../auth/helper';
 
 const StudentHome = () => {
 
     const [companyData, setcompanyData] = useState([]);
     const [individualData, setindividualData] = useState([]);
-    const getDetailsFromLocal = () => {
-        if (getlocalstore("company_data").length !== 0) {
-            setcompanyData(getlocalstore("company_data"));
+    const [companyFormData, setCompanyFormData] = useState([]);
+
+    const [values, setvalues] = useState({
+        Cform: false
+    });
+    const { Cform } = values;
+
+    const getDetailsFromLocal = (val) => {
+        if (getlocalstore(val).length !== 0) {
+            if (val === "company_data") {
+                setcompanyData(getlocalstore(val));
+            }
+            else if (val === "companyFormData") {
+                setCompanyFormData(getlocalstore(val));
+            }
         } else {
-            get_company_details().then(res => {
-                if (res.status === true) {
-                    localStore("company_data", res.data, () => {
-                        setcompanyData(res.data);
-                    });
-                } else {
-                    alert('Server error data Not found, please contact to Admin');
-                }
-            }).catch(e => {
-                console.log(e);
-            })
+            if (val === "company_data") {
+                //alert('fetch data from DB company');
+                get_company_details().then(res => {
+                    if (res.status === true) {
+                        localStore("company_data", res.data, () => {
+                            setcompanyData(res.data);
+                        });
+                    } else {
+                        alert('Server error data Not found, please contact to Admin');
+                    }
+                }).catch(e => {
+                    console.log(e);
+                })
+            } else if (val === "companyFormData") {
+                //alert('fetch data from DB company Form');
+                getCompanyFormDetails().then(res => {
+                    if (res.status === true) {
+                        localStore("companyFormData", res.data, () => {
+                            setCompanyFormData(res.data);
+                        });
+                    } else {
+                        alert('Server error data Not found, please contact to Admin');
+                    }
+                }).catch(e => {
+                    console.log(e);
+                })
+            }
+
         }
     }
 
     useEffect(() => {
-        getDetailsFromLocal()
+        getDetailsFromLocal("company_data");
+        getDetailsFromLocal("companyFormData");
     }, []);
 
     const getIndividualCompany = (val) => () => {
+        setvalues({ ...values, Cform: true })
         companyData.map((data, index) => {
             if (data._id === val) {
                 setindividualData(data);
             }
         })
+    }
+    const Companyregistrationform = (val) => {
+        if (Cform === true) {
+            var condi = false;
+            var link_val = "";
+            companyFormData.map((data, i) => {
+                var Cyear = getlocalstore('student').year_of_passing;
+                if(data.student_year === Cyear){
+                    if (data.company_name === val) {
+                        condi = true;
+                        link_val = data.company_google_link;
+                    }
+                }
+            })
+            if (condi === true) {
+                return (
+                    <a href={link_val} class="btn btn-success" target="blank">Registration form</a>
+                )
+            }
+        }
     }
     const CompanyModel = () => {
         return (
@@ -81,6 +132,7 @@ const StudentHome = () => {
                             </div>
                         </div>
                         <div className="modal-footer">
+                            {Companyregistrationform(individualData.name)}
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -105,7 +157,7 @@ const StudentHome = () => {
                         </div>
                         <div className="row mb-2">
                             <div className="col-lg-12">
-                                <marquee><h2>Important annonment</h2></marquee>
+                                <marquee><h2>Important announcement</h2></marquee>
                             </div>
                         </div>
                         <div className="row">

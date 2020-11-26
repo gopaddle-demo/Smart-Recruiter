@@ -21,27 +21,25 @@ export default function FourthYear() {
                     <div className="row" id="cpbasicgroup">
                         <div className="col-md-12 col-12 mt-3">
                             <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear1" aria-expanded="false" aria-controls="#fourthyear1">
-                                Follow the DataStructure Roadmaps given below
+                                It's already high time focus on Major Project
                                 </div>
                             <div className="collapse show" id="fourthyear1">
                                 <div className="customcard">
                                     <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
+                                        <li>Master yourself in the field of project you have choose to develop.</li>
                                     </ul>
-                                    <li><Link to="/CompetitiveProgramming/DataStruture">Roadmaps For DSA Beginner</Link></li>
-                                    <li><Link to="/CompetitiveProgramming/Algorithms">Roadmaps For DSA Advanced</Link></li>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-md-12 col-12 mt-3">
                             <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear2" aria-expanded="false" aria-controls="#fourthyear2">
-                                Follow the DataStructure Roadmaps given below
-                        </div>
+                                Practice Mock Interviews
+                            </div>
                             <div className="collapse" id="fourthyear2">
                                 <div className="customcard">
                                     <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
+                                        <li>Talk to yourself in laptop webcam and try not to see yourself and aim at camera.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -49,50 +47,12 @@ export default function FourthYear() {
 
                         <div className="col-md-12 col-12 mt-3">
                             <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear3" aria-expanded="false" aria-controls="#fourthyear3">
-                                Follow the DataStructure Roadmaps given below
+                                Keep following the Third year steps and keep calm
                                 </div>
                             <div className="collapse" id="fourthyear3">
                                 <div className="customcard">
                                     <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-12 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear4" aria-expanded="false" aria-controls="#fourthyear4">
-                                Follow the DataStructure Roadmaps given below
-                                </div>
-                            <div className="collapse" id="fourthyear4">
-                                <div className="customcard">
-                                    <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-12 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear5" aria-expanded="false" aria-controls="#fourthyear5">
-                                Follow the DataStructure Roadmaps given below
-                                </div>
-                            <div className="collapse" id="fourthyear5">
-                                <div className="customcard">
-                                    <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-12 col-12 mt-3">
-                            <div className="collaspebtn" data-toggle="collapse" data-parent="#cpbasicgroup" href="#fourthyear6" aria-expanded="false" aria-controls="#fourthyear6">
-                                Follow the DataStructure Roadmaps given below
-                                </div>
-                            <div className="collapse" id="fourthyear6">
-                                <div className="customcard">
-                                    <ul>
-                                        <li>You have learned a programming language with the basics of Data Structures. Now it's time to use those skills.</li>
+                                        <li>One of the biggest achievement is to wait for your turn and then perfrom, keep yourself down to earth even of your have achieved more.</li>
                                     </ul>
                                 </div>
                             </div>

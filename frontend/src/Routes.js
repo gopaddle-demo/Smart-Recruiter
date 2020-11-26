@@ -32,7 +32,7 @@ import FirstYear from './Student/Years/FirstYear';
 import SecondYear from './Student/Years/SecondYear';
 import ThirdYear from './Student/Years/ThirdYear';
 import FourthYear from './Student/Years/FourthYear';
-
+import CompanyForm from './Dashboard/CompanyForm';
 
 const Routes = () =>{
     return(
@@ -46,6 +46,7 @@ const Routes = () =>{
                     <Route path="/student" exact component={Student}></Route>
                     <Route path="/alumni" exact component={Alumni}></Route>
                     <Route path="/StudentLogin" exact component={StudentLogin}></Route>
+                    <Route path="/CompanyForm" exact component={CompanyForm}></Route>
                     <PrivateRoute path="/StudentHome" exact component={StudentHome} />
                     <PrivateRoute path="/RoadmapsHome" exact component={RoadmapsHome} />
                     <PrivateRoute path="/YearHome" exact component={YearHome} />

@@ -101,7 +101,7 @@ const AlumniIndex = () => {
                                 <h3 className="text-white mb-0">Alumni Data</h3>
                             </div>
                             <div className="col-md-6 text-right">
-                                <input className="alumniinputfield" type="text" placeholder="Search by Email or Name" value={alumniSearch} onChange={searchHandler("alumniSearch")} />
+                                <input className="alumniinputfield" type="text" placeholder="Search by Email" value={alumniSearch} onChange={searchHandler("alumniSearch")} />
                             </div>
                         </div>
                     </div>

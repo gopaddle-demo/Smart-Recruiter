@@ -21,8 +21,8 @@ const Index = () => {
                     <div className="row">
                         <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                             data-aos="fade-up" data-aos-delay="200">
-                            <h1>Prepare yourself for better future</h1>
-                            <h2>Here to get infomation of placement, Roadmap, campus drive</h2>
+                            <h1>A Bright Step towards your better future</h1>
+                            <h2>Get infomation of placement in your Campus and Roadmap to new technologies</h2>
                             <div className="d-lg-flex">
                                 <Link to="/StudentLogin"><button className="btn-get-started scrollto">Get Started</button></Link>
                             </div>
@@ -72,13 +72,13 @@ const Index = () => {
                     <div className="row content">
                         <div className="col-lg-6">
                             <p>
-                                Smart Recruiter is a Svvv plateform where you gets knowlegde of lastest technologies, roadmaps in the
-                                field of web development, mobile development etc.
+                                Smart Recruiter is a platform designed for SVVV University where you get knowlegde of Upcomming comanies for placements, latest technologies and roadmaps in the
+                                field of web development, Competitive Coding, Data Structures etc.
                             </p>
                             <ul>
-                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Get campus drive infomation from smart recruiter website</li>
-                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Improve your knowlegde and learn lastest technologies </li>
-                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Get yearwise Roadmaps which help you to place in your dream
+                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Get Campus drive infomation from Smart Recruiter Platfrom</li>
+                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Improve your knowlegde and learn lastest technologies</li>
+                                <li><i class='bx bx-right-arrow-alt bx-fade-left' ></i> Get Yearwise Roadmaps which will help you to get place in your dream
                             company</li>
                             </ul>
                         </div>
@@ -108,7 +108,9 @@ const Index = () => {
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bx-code'></i></div>
                                 <h4>First Year</h4>
-                                <p>get knowlegde of programming languages which programming language is best for you</p>
+                                <p>Get knowlegde of programming languages and master which you like most to play with.</p>
+                                <br />
+                                <p>Login to get more</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
@@ -116,7 +118,9 @@ const Index = () => {
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxs-terminal'></i></div>
                                 <h4>Second Year</h4>
-                                <p>Learn what is Competitive programming and which website is best to do Competitive programming</p>
+                                <p>Learn what is Competitive programming and participate into virtual contests.</p>
+                                <br />
+                                <p>Login to get more</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
@@ -124,7 +128,9 @@ const Index = () => {
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxs-data'></i></div>
                                 <h4>Third Year</h4>
-                                <p>Get prepare for your placement and interview tips</p>
+                                <p>Gear up it's high time and prepare for your placement and practice mock interviews.</p>
+                                <br />
+                                <p>Login to get more</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
@@ -132,7 +138,9 @@ const Index = () => {
                             <div class="icon-box">
                                 <div class="icon"><i class='bx bxl-javascript'></i></div>
                                 <h4>Fourth Year</h4>
-                                <p>Learn about internship and get best website to get best internship for you</p>
+                                <p>Learn about internship and work on getting the best internship for you</p>
+                                <br /><br />
+                                <p>Login to get more</p>
                             </div>
                         </div>
                     </div>
@@ -249,8 +257,8 @@ const Index = () => {
                 <div class="container" data-aos="zoom-in">
                     <div class="row">
                         <div class="col-lg-9 text-center text-lg-left">
-                            <h3>Start learning today for your better future</h3>
-                            <p>Please click on button to start learning from today and get placed</p>
+                            <h3>A Bright Step towards your better future</h3>
+                            <p>Step up by clicking here and make your learning into earning</p>
                         </div>
                         <div class="col-lg-3 cta-btn-container text-center">
                             <Link to="/StudentLogin"><button class="cta-btn align-middle">Get Started</button></Link>
@@ -269,30 +277,28 @@ const Index = () => {
                         <p>We are a Team of experienced students of college.</p>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 mt-2">
                             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="pic"><img src={nayan} class="img-fluid" alt="" /></div>
                                 <div class="member-info">
                                     <h4>Nayan Pal</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <p></p>
                                     <div class="social">
-                                        <a href="#link"><i class='bx bxl-instagram-alt'></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square'></i></a>
+                                        <a href="https://github.com/nayanpal777"><i class='bx bxl-github bx-tada' ></i></a>
+                                        <a href="https://www.linkedin.com/in/nayan-pal777/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                        <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="col-lg-6 mt-2">
                             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="pic"><img src={manmeet} class="img-fluid" alt="" /></div>
                                 <div class="member-info">
                                     <h4>Manmeet Juneja</h4>
-                                    <span>Product Manager</span>
-                                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                                     <div class="social">
-                                        <a href="#link"><i class='bx bxl-instagram-alt'></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square'></i></a>
+                                        <a href="https://github.com/manmeetjuneja"><i class='bx bxl-github bx-tada'></i></a>
+                                        <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                        <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -302,11 +308,9 @@ const Index = () => {
                                 <div class="pic"><img src={sarwesh} class="img-fluid" alt="" /></div>
                                 <div class="member-info">
                                     <h4>Sarwesh Chitambre</h4>
-                                    <span>CTO</span>
-                                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                                     <div class="social">
-                                        <a href="#link"><i class='bx bxl-instagram-alt'></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square'></i></a>
+                                        <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
+                                        <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -316,11 +320,9 @@ const Index = () => {
                                 <div class="pic"><img src={shakshi} class="img-fluid" alt="" /></div>
                                 <div class="member-info">
                                     <h4>Shakshi Maheshwari</h4>
-                                    <span>CTO</span>
-                                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                                     <div class="social">
-                                        <a href="#link"><i class='bx bxl-instagram-alt'></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square'></i></a>
+                                        <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
+                                        <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                     </div>
                                 </div>
                             </div>

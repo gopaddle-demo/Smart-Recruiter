@@ -150,3 +150,41 @@ export const getStudentDetails = () => {
             console.log(e);
         })
 }
+
+/**********************************************
+ * Add Company Form Details by Admin
+ ***********************************************/
+export const add_company_form_details = Formdetails =>{
+    return fetch(`${API}Admin/company/Add_company_form`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(Formdetails)
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(e => {
+            console.log(e);
+        })
+}
+/** ***************************************
+ * Get Company Form Details API 
+******************************************/
+export const getCompanyFormDetails = () => {
+    return fetch(`${API}Admin/company/getCompanyFormDetails`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(e => {
+            console.log(e);
+        })
+}

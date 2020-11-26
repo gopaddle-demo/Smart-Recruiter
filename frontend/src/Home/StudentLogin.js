@@ -45,7 +45,7 @@ const StudentLogin = () => {
     }
     const conditionchange2 = (event) => {
         event.preventDefault();
-        setStudent({ ...Student, condition: "login", email:"", error: false, success: false, enrollment_id: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification:false });
+        setStudent({ ...Student, condition: "login", email: "", error: false, success: false, enrollment_id: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification: false });
     }
     const conditionchange3 = (event) => {
         event.preventDefault();
@@ -93,10 +93,10 @@ const StudentLogin = () => {
             )
         )
     }
-    const redirecttohome = ()=>{
+    const redirecttohome = () => {
         return (
             didredirect && (
-                <Redirect to="/StudentHome"/>
+                <Redirect to="/StudentHome" />
             )
         )
     }
@@ -116,7 +116,7 @@ const StudentLogin = () => {
                 studentSignIn({ enrollment_id, password })
                     .then(data => {
                         if (data.status === true) {
-                            localStore("student", data.data, ()=>{
+                            localStore("student", data.data, () => {
                                 setStudent({
                                     ...Student,
                                     didredirect: true,
@@ -144,7 +144,7 @@ const StudentLogin = () => {
                 alert("please enter enrollment id");
             } else if (branch === "") {
                 alert("please select branch");
-            } else if (mobile_number.length !== 10 && mobile_number.length>10) {
+            } else if (mobile_number.length !== 10 && mobile_number.length > 10) {
                 alert("please enter valid mobile number");
             } else if (year_of_passing === "") {
                 alert("please enter your year of passing");
@@ -185,37 +185,37 @@ const StudentLogin = () => {
                     })
             }
         } else if (condition === "forgotpassword") {
-            if(password === "")
+            if (password === "")
                 alert("please enter password");
             else if (Cpassword === "")
                 alert("please enter confirm password");
             else if (password !== Cpassword)
                 alert("password Not match");
-            else{
-                setStudent({...Student, loading: true})
+            else {
+                setStudent({ ...Student, loading: true })
                 forgotpassword({ email, password })
-                .then(data =>{
-                    if(data.status === true){
-                        setStudent({
-                            ...Student,
-                            msg: data.msg,
-                            success: true,
-                            loading: false,
-                            error: false,
-                            email: "",
-                            password: "",
-                            Cpassword: ""
-                        })
-                    }else if (data.status === false){
-                        setStudent({
-                            ...Student,
-                            msg: data.msg,
-                            error: true,
-                            success: false,
-                            loading: false
-                        })
-                    }
-                })
+                    .then(data => {
+                        if (data.status === true) {
+                            setStudent({
+                                ...Student,
+                                msg: data.msg,
+                                success: true,
+                                loading: false,
+                                error: false,
+                                email: "",
+                                password: "",
+                                Cpassword: ""
+                            })
+                        } else if (data.status === false) {
+                            setStudent({
+                                ...Student,
+                                msg: data.msg,
+                                error: true,
+                                success: false,
+                                loading: false
+                            })
+                        }
+                    })
             }
         }
     }
@@ -289,7 +289,7 @@ const StudentLogin = () => {
                         <div className="col-md-8 offset-md-2">
                             <div className="wrap-input100 validate-input m-b-15">
                                 <span className="label-input100">Password<span class="asteriskField">*</span></span>
-                                <input className="input100" type="password" placeholder="Please enter new password" value={password} onChange={handleChange("password")}/>
+                                <input className="input100" type="password" placeholder="Please enter new password" value={password} onChange={handleChange("password")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                         </div>
@@ -298,7 +298,7 @@ const StudentLogin = () => {
                         <div className="col-md-8 offset-md-2">
                             <div className="wrap-input100 validate-input m-b-15">
                                 <span className="label-input100">confirm Password<span class="asteriskField">*</span></span>
-                                <input className="input100" type="password" placeholder="Please re-enter your password" value={Cpassword} onChange={handleChange("Cpassword")}/>
+                                <input className="input100" type="password" placeholder="Please re-enter your password" value={Cpassword} onChange={handleChange("Cpassword")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                         </div>
@@ -484,19 +484,17 @@ const StudentLogin = () => {
     ****************************************/
     const StudentRegistration = () => {
         return (
-            <div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                {emailForm()}
-                                {loadingmsg()}
-                                {otpForm()}
-                                {registrationForm()}
-                                {forgotpass()}
-                            </div>
-                            {modalFooterButton()}
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            {emailForm()}
+                            {loadingmsg()}
+                            {otpForm()}
+                            {registrationForm()}
+                            {forgotpass()}
                         </div>
+                        {modalFooterButton()}
                     </div>
                 </div>
             </div>
@@ -504,48 +502,46 @@ const StudentLogin = () => {
     }
 
     return (
-        <div>
-            <div className="limiter">
-                <div className="container-login100">
-                    <div className="wrap-login100 p-l-55 p-r-55 p-t-45 p-b-45">
-                        <form className="login100-form validate-form">
-                            {loadingmsg()}
-                            {errormsg()}
-                            <span className="login100-form-title p-b-30">
-                                Student Login
+        <div className="limiter">
+            <div className="container-login100">
+                <div className="wrap-login100 p-l-55 p-r-55 p-t-45 p-b-45">
+                    <form className="login100-form validate-form">
+                        {loadingmsg()}
+                        {errormsg()}
+                        <span className="login100-form-title p-b-30">
+                            Student Login
         					</span>
-                            <div className="wrap-input100 validate-input m-b-23">
-                                <span className="label-input100">Email</span>
-                                <input className="input100" type="text" placeholder="Enter your email address" value={enrollment_id} onChange={handleChange("enrollment_id")} />
-                                <span className="focus-input100" data-symbol="&#xf206;"></span>
-                            </div>
-                            <div className="wrap-input100 validate-input m-b-20">
-                                <span className="label-input100">Password</span>
-                                <input className="input100" type="password" placeholder="Enter your password" value={password} onChange={handleChange("password")} />
-                                <span className="focus-input100" data-symbol="&#xf190;"></span>
-                            </div>
-                            <div className="container-login100-form-btn p-t-10">
-                                <div className="wrap-login100-form-btn">
-                                    <div className="login100-form-bgbtn"></div>
-                                    <button className="login100-form-btn" onClick={onSubmit}>
-                                        Login
+                        <div className="wrap-input100 validate-input m-b-23">
+                            <span className="label-input100">Email</span>
+                            <input className="input100" type="text" placeholder="Enter your email address" value={enrollment_id} onChange={handleChange("enrollment_id")} />
+                            <span className="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+                        <div className="wrap-input100 validate-input m-b-20">
+                            <span className="label-input100">Password</span>
+                            <input className="input100" type="password" placeholder="Enter your password" value={password} onChange={handleChange("password")} />
+                            <span className="focus-input100" data-symbol="&#xf190;"></span>
+                        </div>
+                        <div className="container-login100-form-btn p-t-10">
+                            <div className="wrap-login100-form-btn">
+                                <div className="login100-form-bgbtn"></div>
+                                <button className="login100-form-btn" onClick={onSubmit}>
+                                    Login
     							    </button>
-                                </div>
                             </div>
-                            <div className="flex-col-c p-t-20">
-                                <h3>
-                                    New to the Website please <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange}><u>SignUp</u></button>
-                                </h3>
-                            </div>
-                            <div className="flex-col-c p-t-10">
-                                <h3>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange3}><u>Forgot password</u></button>
-                                </h3>
-                            </div>
-                        </form>
-                        {StudentRegistration()}
-                        {redirecttohome()}
-                    </div>
+                        </div>
+                        <div className="flex-col-c p-t-20">
+                            <h3>
+                                New to the Website please <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange}><u>SignUp</u></button>
+                            </h3>
+                        </div>
+                        <div className="flex-col-c p-t-10">
+                            <h3>
+                                <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange3}><u>Forgot password</u></button>
+                            </h3>
+                        </div>
+                    </form>
+                    {StudentRegistration()}
+                    {redirecttohome()}
                 </div>
             </div>
         </div>
