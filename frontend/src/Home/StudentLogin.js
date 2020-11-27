@@ -513,7 +513,7 @@ const StudentLogin = () => {
         					</span>
                         <div className="wrap-input100 validate-input m-b-23">
                             <span className="label-input100">Email</span>
-                            <input className="input100" type="text" placeholder="Enter your email address" value={enrollment_id} onChange={handleChange("enrollment_id")} />
+                            <input className="input100" type="text" placeholder="Enter your email" value={enrollment_id} onChange={handleChange("enrollment_id")} />
                             <span className="focus-input100" data-symbol="&#xf206;"></span>
                         </div>
                         <div className="wrap-input100 validate-input m-b-20">
@@ -529,7 +529,7 @@ const StudentLogin = () => {
     							    </button>
                             </div>
                         </div>
-                        <div className="flex-col-c p-t-20">
+                        <div className="flex-col-c p-t-20 text-center">
                             <h3>
                                 New to the Website please <button type="button" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" onClick={conditionchange}><u>SignUp</u></button>
                             </h3>

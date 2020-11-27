@@ -1,7 +1,5 @@
 import React from 'react'
 import Header from './Header';
-import Footer from './Footer';
-
 import main from '../images/main.png';
 import shakshi from '../images/team/shakshi.png';
 import nayan from '../images/team/nayan.png';
@@ -105,7 +103,7 @@ const Index = () => {
                     </div>
                     <div class="row">
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="icon-box">
+                            <div class="icon-box text-center">
                                 <div class="icon"><i class='bx bx-code'></i></div>
                                 <h4>First Year</h4>
                                 <p>Get knowlegde of programming languages and master which you like most to play with.</p>
@@ -115,7 +113,7 @@ const Index = () => {
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                             data-aos-delay="200">
-                            <div class="icon-box">
+                            <div class="icon-box text-center">
                                 <div class="icon"><i class='bx bxs-terminal'></i></div>
                                 <h4>Second Year</h4>
                                 <p>Learn what is Competitive programming and participate into virtual contests.</p>
@@ -125,7 +123,7 @@ const Index = () => {
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                             data-aos-delay="300">
-                            <div class="icon-box">
+                            <div class="icon-box text-center">
                                 <div class="icon"><i class='bx bxs-data'></i></div>
                                 <h4>Third Year</h4>
                                 <p>Gear up it's high time and prepare for your placement and practice mock interviews.</p>
@@ -135,7 +133,7 @@ const Index = () => {
                         </div>
                         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                             data-aos-delay="400">
-                            <div class="icon-box">
+                            <div class="icon-box text-center">
                                 <div class="icon"><i class='bx bxl-javascript'></i></div>
                                 <h4>Fourth Year</h4>
                                 <p>Learn about internship and work on getting the best internship for you</p>
@@ -164,12 +162,12 @@ const Index = () => {
                                     and get basic idea of how to build quality websites.
                                  </p>
                             </div>
-                            <div class="accordion-list">
+                            <div className="accordion-list">
                                 <ul>
                                     <li>
                                         <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> What is front-end?
                                         <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                        <div id="accordion-list-1" class="collapse show">
                                             <p>
                                                 The frontend of a software program or website is everything with which the user interacts. From a user standpoint, the frontend is synonymous with the user interface. ... Websites must work well on multiple devices and screen sizes, which is why modern web development typically involves responsive design.
                                             </p>
@@ -179,7 +177,7 @@ const Index = () => {
                                     <li>
                                         <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> What is Back-end?
                                         <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                        <div id="accordion-list-2" class="collapse">
                                             <p>
 
                                                 Back end Development refers to the server side of development where you are primarily focused on how the site works. ... This type of web development usually consists of three parts: a server, an application, and a database.
@@ -189,7 +187,7 @@ const Index = () => {
 
                                     <li>
                                         <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> What is server API?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                        <div id="accordion-list-3" class="collapse">
                                             <p>
                                                 API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other.
                                             </p>
@@ -202,12 +200,12 @@ const Index = () => {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-5 align-items-stretch order-2 order-lg-1 img" data-aos="zoom-in" data-aos-delay="150"></div>
-                        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
+                        <div class="col-lg-5 align-items-stretch img" data-aos="zoom-in" data-aos-delay="150"></div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
                             <div class="content">
                                 <h3>Competitive Programming <br /><strong> learn about C.P. </strong></h3>
                                 <p>
-                                    Roadmap to learn Competative programming. Here you learn about data structures & algorithm. Get knowlegde of Hackerrank, Hackerearth, codechef etc.
+                                    Roadmap to learn Competative programming. Here you learn about data structures and algorithm. Get knowlegde of Hackerrank, Hackerearth, codechef etc.
                                 </p>
                             </div>
 
@@ -277,52 +275,104 @@ const Index = () => {
                         <p>We are a Team of experienced students of college.</p>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 mt-2">
+                        <div class="col-lg-6 mt-3">
                             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="pic"><img src={nayan} class="img-fluid" alt="" /></div>
-                                <div class="member-info">
-                                    <h4>Nayan Pal</h4>
-                                    <div class="social">
-                                        <a href="https://github.com/nayanpal777"><i class='bx bxl-github bx-tada' ></i></a>
-                                        <a href="https://www.linkedin.com/in/nayan-pal777/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
-                                        <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <div class="pic"><img src={nayan} class="img-fluid" alt="Nayan Pal" /></div>
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div class="member-info">
+                                            <h4>Nayan Pal</h4>
+                                            <span>Team Leader and Developer</span>
+                                            <ul>
+                                                <li>Design FrontEnd with (ReactJS)</li>
+                                                <li>Design BackEnd with (NodeJs)</li>
+                                                <li>Manage Database (MongoDB)</li>
+                                                <li>Deployment Project on (Heroku)</li>
+                                            </ul>
+                                            <div class="social">
+                                                <a href="https://github.com/nayanpal777"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="https://www.linkedin.com/in/nayan-pal777/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-2">
+                        <div class="col-lg-6 mt-3">
                             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="pic"><img src={manmeet} class="img-fluid" alt="" /></div>
-                                <div class="member-info">
-                                    <h4>Manmeet Juneja</h4>
-                                    <div class="social">
-                                        <a href="https://github.com/manmeetjuneja"><i class='bx bxl-github bx-tada'></i></a>
-                                        <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
-                                        <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <div class="pic"><img src={manmeet} class="img-fluid" alt="Manmeet Juneja" /></div>
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div class="member-info">
+                                            <h4>Manmeet Juneja</h4>
+                                            <span>Role of Manmeet Juneja</span>
+                                            <ul>
+                                                <li>First Point of role</li>
+                                                <li>Second Point of role</li>
+                                                <li>Third Point of role</li>
+                                                <li>Deployment Project on (Heroku)</li>
+                                            </ul>
+                                            <div class="social">
+                                                <a href="https://github.com/manmeetjuneja"><i class='bx bxl-github bx-tada'></i></a>
+                                                <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-4">
+                        <div class="col-lg-6 mt-3">
                             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="pic"><img src={sarwesh} class="img-fluid" alt="" /></div>
-                                <div class="member-info">
-                                    <h4>Sarwesh Chitambre</h4>
-                                    <div class="social">
-                                        <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <div class="pic"><img src={sarwesh} class="img-fluid" alt="Sarwesh Chitambre" /></div>
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div class="member-info">
+                                            <h4>Sarwesh Chitambre</h4>
+                                            <span>Role of Sarwesh Chitambre</span>
+                                            <ul>
+                                                <li>First Point of role</li>
+                                                <li>Second Point of role</li>
+                                                <li>Third Point of role</li>
+                                                <li>Deployment Project on (Heroku)</li>
+                                            </ul>
+                                            <div class="social">
+                                                <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="pic"><img src={shakshi} class="img-fluid" alt="" /></div>
-                                <div class="member-info">
-                                    <h4>Shakshi Maheshwari</h4>
-                                    <div class="social">
-                                        <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
-                                        <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                        <div class="col-lg-6 mt-3">
+                            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <div class="pic"><img src={shakshi} class="img-fluid" alt="Shakshi Maheshwari" /></div>
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div class="member-info">
+                                            <h4>Shakshi Maheshwari</h4>
+                                            <span>Role of Shakshi Maheshwari</span>
+                                            <ul>
+                                                <li>First Point of role</li>
+                                                <li>Second Point of role</li>
+                                                <li>Third Point of role</li>
+                                                <li>Deployment Project on (Heroku)</li>
+                                            </ul>
+                                            <div class="social">
+                                                <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +380,17 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <footer id="footer">
+                <div class="container footer-bottom clearfix">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Smart Recruiter </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed and Develop by Nayan Pal
+                    </div>
+                </div>
+            </footer>
+            <a href="#" class="back-to-top"><i class='bx bxs-up-arrow-alt bx-fade-down'></i></a>
         </div>
     )
 }
