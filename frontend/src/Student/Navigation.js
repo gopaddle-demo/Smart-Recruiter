@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom'
 
 const currenttab = (history, path) => {
     if (history.location.pathname === path) {
-        return { background: "#edf1f4"}
+        return { background: "rgb(40, 116, 240, 0.2)", "border-radius": "30px" }
+
     }
 }
 
@@ -13,34 +14,43 @@ const Navigation = ({ history, path }) => {
             <div className="collapse navbar-collapse" id="sidenav-collapse-main">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/StudentHome")}>
-                            <i className="ni ni-tv-2 text-primary"></i>
-                            <span className="nav-link-text"><Link to="/StudentHome">Dashboard</Link></span>
+                        <Link to="/StudentHome"><div className="nav-link" style={currenttab(history, "/StudentHome")}>
+                            <i class='bx bxs-right-arrow-alt'></i>
+                            <span className="nav-link-text">Dashboard</span>
                         </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/RoadmapsHome")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/RoadmapsHome">Roadmaps</Link></span>
-                        </div>
+                        <Link to="/RoadmapsHome">
+                            <div className="nav-link" style={currenttab(history, "/RoadmapsHome")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Roadmaps</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/StudentAlumni")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/StudentAlumni">Alumni</Link></span>
-                        </div>
+                        <Link to="/StudentAlumni">
+                            <div className="nav-link" style={currenttab(history, "/StudentAlumni")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Alumni</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/YearHome")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/YearHome">Select Year</Link></span>
-                        </div>
+                        <Link to="/YearHome">
+                            <div className="nav-link" style={currenttab(history, "/YearHome")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Select Year</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/OffCampus")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/OffCampus">Off Campus</Link></span>
-                        </div>
+                        <Link to="/OffCampus">
+                            <div className="nav-link" style={currenttab(history, "/OffCampus")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Off Campus</span>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
                 <hr className="my-3" />
