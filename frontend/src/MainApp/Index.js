@@ -292,9 +292,9 @@ const Index = () => {
                                                 <li>Deployment Project on (Heroku)</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="https://github.com/nayanpal777"><i class='bx bxl-github bx-tada' ></i></a>
-                                                <a href="https://www.linkedin.com/in/nayan-pal777/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
-                                                <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                                <a href="https://github.com/nayanpal777" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="https://www.linkedin.com/in/nayan-pal777/" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://nayanpal777.github.io/" target="blank"><i class='bx bxl-product-hunt bx-tada' ></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -318,9 +318,9 @@ const Index = () => {
                                                 <li>Deployment Project on (Heroku)</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="https://github.com/manmeetjuneja"><i class='bx bxl-github bx-tada'></i></a>
-                                                <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/"><i class='bx bxl-linkedin-square bx-tada'></i></a>
-                                                <a href="https://nayanpal777.github.io/"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                                <a href="https://github.com/manmeetjuneja" target="blank"><i class='bx bxl-github bx-tada'></i></a>
+                                                <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://nayanpal777.github.io/" target="blank"><i class='bx bxl-product-hunt bx-tada' ></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -344,8 +344,8 @@ const Index = () => {
                                                 <li>Deployment Project on (Heroku)</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
-                                                <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="#link" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="#link" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -369,8 +369,8 @@ const Index = () => {
                                                 <li>Deployment Project on (Heroku)</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="#link"><i class='bx bxl-github bx-tada' ></i></a>
-                                                <a href="#link"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="#link" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="#link" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                             </div>
                                         </div>
                                     </div>
