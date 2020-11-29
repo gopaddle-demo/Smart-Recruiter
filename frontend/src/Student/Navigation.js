@@ -45,10 +45,10 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/OffCampus">
-                            <div className="nav-link" style={currenttab(history, "/OffCampus")}>
+                        <Link to="/ShowInterviewExp">
+                            <div className="nav-link" style={currenttab(history, "/ShowInterviewExp")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
-                                <span className="nav-link-text">Off Campus</span>
+                                <span className="nav-link-text">Interview Exprience</span>
                             </div>
                         </Link>
                     </li>

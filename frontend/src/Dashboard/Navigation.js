@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 
 const currenttab = (history, path) => {
     if (history.location.pathname === path) {
-        return { background: "#edf1f4"}
+        return { background: "#edf1f4" }
     }
 }
 
@@ -13,34 +13,44 @@ const Navigation = ({ history, path }) => {
             <div className="collapse navbar-collapse" id="sidenav-collapse-main">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/dashboard")}>
-                            <i className="ni ni-tv-2 text-primary"></i>
-                            <span className="nav-link-text"><Link to="/dashboard">Dashboard</Link></span>
-                        </div>
+                        <Link to="/dashboard">
+                            <div className="nav-link" style={currenttab(history, "/dashboard")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Dashboard</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/company")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/company">Company</Link></span>
-                        </div>
+                        <Link to="/company">
+                            <div className="nav-link" style={currenttab(history, "/company")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Company</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/student")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/student">Student</Link></span>
-                        </div>
+                        <Link to="/student">
+                            <div className="nav-link" style={currenttab(history, "/student")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Student</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/alumni")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/alumni">Alumni</Link></span>
-                        </div>
+                        <Link to="/alumni">
+                            <div className="nav-link" style={currenttab(history, "/alumni")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Alumni</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <div className="nav-link" style={currenttab(history, "/companyform")}>
-                            <i className="ni ni-circle-08 text-default"></i>
-                            <span className="nav-link-text"><Link to="/companyform">Company Form</Link></span>
-                        </div>
+                        <Link to="/companyform">
+                            <div className="nav-link" style={currenttab(history, "/companyform")}>
+                                <i class='bx bxs-right-arrow-alt'></i>
+                                <span className="nav-link-text">Company Form</span>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
                 <hr className="my-3" />

@@ -104,9 +104,9 @@ export const updateProfile = student => {
  * Student Auth API 
 *******************************/
 export const isAuthenticated = () => {
-    if(typeof window === undefined)
+    if (typeof window === undefined)
         return false;
-    if(localStorage.getItem('student'))
+    if (localStorage.getItem('student'))
         return true;
     else
         return false;
@@ -115,15 +115,15 @@ export const isAuthenticated = () => {
 /** **************************
  * Student Logout API 
 *******************************/
-export const StudentLogout = () =>{
-    if(typeof window !== undefined){
+export const StudentLogout = () => {
+    if (typeof window !== undefined) {
         localStorage.clear();
     }
 }
 /** **************************
  * Student Logout API 
 *******************************/
-export const AlumniData = (val) =>{
+export const AlumniData = (val) => {
     return fetch(`${API}Student/convertExcelToJson/${val}`, {
         method: "GET",
         headers: {
@@ -137,4 +137,61 @@ export const AlumniData = (val) =>{
         .catch(err => {
             console.log(err);
         });
+}
+
+/** **************************
+ * add Interview Exp 
+*******************************/
+export const AddInterviewExp = (values) => {
+    return fetch(`${API}Student/InterviewExp/add_interviewExp`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(values)
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
+/** **************************
+ * Get Interview Exp Details 
+*******************************/
+export const GetInterviewExpDetails = () => {
+    return fetch(`${API}Student/InterviewExp/get_InterviewExp`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
+/** *********************************
+ * update Approval of Interview Exp  
+*************************************/
+export const ApprovalInterviewDetails = (values) => {
+    return fetch(`${API}Student/InterviewExp/update_approval`, {
+        method: "PUT",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(values)
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }

@@ -3,6 +3,8 @@ import Navigation from './Navigation';
 import { getlocalstore } from '../auth/helper';
 import { Link, Redirect } from 'react-router-dom';
 import { StudentLogout } from '../auth/studenthelper/StudentIndex';
+import './css/StudentDashBoard.css';
+import logo from '../images/logo.png';
 
 const Base = ({
     children
@@ -33,17 +35,25 @@ const Base = ({
         getStudentDetailsFromLocal()
     }, []);
 
+    const interviewexpbtn = () => {
+        if (name.year_of_passing === 2021) {
+            return (
+                <Link to="/InterviewExperience"><button to="/InterviewExperience" className="interviewexpbtn" type="button">Add Interview Experience</button></Link>
+            )
+        }
+    }
 
     return (
         <div>
             <nav className="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
                 <div className="scrollbar-inner">
-                    <div className="sidenav-header  align-items-center">
+                    <div className="sidenav-header align-items-center mb-7">
                         <span className="navbar-brand">
+                            <img src={logo} alt="Svvv logo" style={{maxHeight: "98px"}}/>
                             <h1>Smart Recruiter</h1>
                         </span>
                     </div>
-                    <hr/>
+                    <hr />
                     <Navigation />
                 </div>
             </nav>
@@ -52,7 +62,7 @@ const Base = ({
                 <nav className="navbar navbar-top navbar-expand navbar-dark bg-main border-bottom">
                     <div className="container-fluid">
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            
+
                             <ul className="navbar-nav align-items-center ml-md-auto ">
                                 <li className="nav-item d-xl-none">
                                     <div className="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
@@ -96,6 +106,7 @@ const Base = ({
                         </div>
                     </div>
                 </nav>
+                {interviewexpbtn()}
                 <div>{children}</div>
             </div>
         </div>

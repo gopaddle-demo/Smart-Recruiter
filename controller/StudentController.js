@@ -2,19 +2,20 @@
     *require Modules  
 ------------------------------------------------------*/
 const router = require('express').Router();
-//const session = require('express-session');
 const bodyparser = require('body-parser');
 const excelToJson = require('convert-excel-to-json');
 const bcryptjs = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
 const student_model = require('../DataBase/models/student_model');
 const EmailAuthentication = require('./EmailAuthentication');
+const InterviewExp = require('./interviewExp');
 /**---------------------------------------------------
     *Middleware Setup for Student  
 ------------------------------------------------------*/
 router.use(bodyparser.json());
 router.use(bodyparser.urlencoded({ extended: true }));
 router.use('/emailauthentication', EmailAuthentication);
+router.use('/InterviewExp', InterviewExp);
 router.get('/', (req, res) => {
     return res.send('Student Module Working fine....');
 })

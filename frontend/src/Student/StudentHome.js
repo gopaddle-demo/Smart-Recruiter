@@ -73,7 +73,7 @@ const StudentHome = () => {
             var link_val = "";
             companyFormData.map((data, i) => {
                 var Cyear = getlocalstore('student').year_of_passing;
-                if(data.student_year === Cyear){
+                if (data.student_year === Cyear) {
                     if (data.company_name === val) {
                         condi = true;
                         link_val = data.company_google_link;
@@ -158,7 +158,7 @@ const StudentHome = () => {
                         </div>
                         <div className="row mb-2">
                             <div className="col-lg-12">
-                                <marquee><h2>Important announcement</h2></marquee>
+                                <h2> <i class='bx bxs-bell-ring bx-tada' ></i>  Important announcement</h2>
                             </div>
                         </div>
                         <div className="row">
