@@ -33,6 +33,8 @@ import SecondYear from './Student/Years/SecondYear';
 import ThirdYear from './Student/Years/ThirdYear';
 import FourthYear from './Student/Years/FourthYear';
 import CompanyForm from './Dashboard/CompanyForm';
+import InterviewExp from './Student/InterviewExp/InterviewExp';
+import ShowInterviewExp from './Student/InterviewExp/ShowInterviewExp';
 
 const Routes = () =>{
     return(
@@ -50,7 +52,7 @@ const Routes = () =>{
                     <PrivateRoute path="/StudentHome" exact component={StudentHome} />
                     <PrivateRoute path="/RoadmapsHome" exact component={RoadmapsHome} />
                     <PrivateRoute path="/YearHome" exact component={YearHome} />
-                    <PrivateRoute path="/OffCampus" exact component={off_campus} />
+                    <PrivateRoute path="/ShowInterviewExp" exact component={ShowInterviewExp} />
                     <PrivateRoute path="/Profile" exact component={Profile} />
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
                     <PrivateRoute path="/EditProfile" exact component={EditProfile} /> 
@@ -69,6 +71,7 @@ const Routes = () =>{
                     <PrivateRoute path ="/Year/SecondYear" exact component={SecondYear} />
                     <PrivateRoute path ="/Year/ThirdYear" exact component={ThirdYear}/>
                     <PrivateRoute path ="/Year/FourthYear" exact component={FourthYear}/>
+                    <PrivateRoute path ="/InterviewExperience" exact component={InterviewExp}/>
                     
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>

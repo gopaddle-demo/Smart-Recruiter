@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navigation from './Navigation'
 import { admin_logout } from '../auth/helper'
 import { Redirect } from 'react-router-dom'
+import logo from '../images/logo.png';
 
 const Base = ({
     children
@@ -37,11 +38,13 @@ const Base = ({
             {performlogout()}
             <nav className="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
                 <div className="scrollbar-inner">
-                    <div className="sidenav-header  align-items-center">
+                    <div className="sidenav-header align-items-center mb-7">
                         <span className="navbar-brand">
+                            <img src={logo} alt="Svvv logo" style={{maxHeight: "98px"}}/>
                             <h1>Smart Recruiter</h1>
                         </span>
                     </div>
+                    <hr />
                     <Navigation />
                 </div>
             </nav>

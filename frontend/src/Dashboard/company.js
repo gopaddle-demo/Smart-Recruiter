@@ -239,7 +239,6 @@ const Company = () => {
                                                     <td>{data.student_placed}</td>
                                                     <td>{data.technical}</td>
                                                     <td><button className="btn btn-danger btn-sm" onClick={delete_company_detail(data._id, ()=>{getdata()})}>Delete</button>
-                                                        <button className="btn btn-success btn-sm">Edit</button>
                                                     </td>
                                                 </tr>
                                             )

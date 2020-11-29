@@ -108,7 +108,6 @@ export default function CompanyForm() {
     }
     const getDataFromLocal = () => {
         if (getlocalstore("companyFormData").length !== 0) {
-            alert('Data fetch from local');
             setCompanyLocalStorageData(getlocalstore("companyFormData"));
         } else {
             setCompanyFormData({ ...companyFormData, loading: true });
