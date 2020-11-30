@@ -36,7 +36,7 @@ const Base = ({
     }, []);
 
     const interviewexpbtn = () => {
-        if (name.year_of_passing === 2021) {
+        if (name.year_of_passing <= 2021) {
             return (
                 <Link to="/InterviewExperience"><button to="/InterviewExperience" className="interviewexpbtn" type="button">Add Interview Experience</button></Link>
             )
@@ -45,11 +45,11 @@ const Base = ({
 
     return (
         <div>
-            <nav className="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+            <nav className="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
                 <div className="scrollbar-inner">
                     <div className="sidenav-header align-items-center mb-7">
                         <span className="navbar-brand">
-                            <img src={logo} alt="Svvv logo" style={{maxHeight: "98px"}}/>
+                            <img src={logo} alt="Svvv logo" style={{ maxHeight: "98px" }} />
                             <h1>Smart Recruiter</h1>
                         </span>
                     </div>
@@ -63,24 +63,23 @@ const Base = ({
                     <div className="container-fluid">
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <ul className="navbar-nav align-items-center ml-md-auto ">
-                                <li className="nav-item d-xl-none">
-                                    <div className="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
-                                        data-target="#sidenav-main">
-                                        <div className="sidenav-toggler-inner">
-                                            <i className="sidenav-toggler-line"></i>
-                                            <i className="sidenav-toggler-line"></i>
-                                            <i className="sidenav-toggler-line"></i>
+                            <ul className="navbar-nav align-items-center ml-auto">
+                                <li class="nav-item d-xl-none">
+                                    <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+                                        <div class="sidenav-toggler-inner">
+                                            <i class="sidenav-toggler-line"></i>
+                                            <i class="sidenav-toggler-line"></i>
+                                            <i class="sidenav-toggler-line"></i>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
-                            <ul className="navbar-nav align-items-center ml-auto ml-md-0 ">
+                            <ul className="navbar-nav align-items-center ml-md-0 ">
                                 <li className="nav-item dropdown">
                                     <button className="nav-link pr-0" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         <div className="media align-items-center">
-                                            <div className="media-body ml-2 d-none d-lg-block">
+                                            <div className="media-body ml-2 d-lg-block">
                                                 <span className="mb-0 text-sm font-weight-bold">{name.name}</span>
                                             </div>
                                         </div>

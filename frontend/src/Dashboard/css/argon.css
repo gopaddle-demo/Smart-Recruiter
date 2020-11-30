@@ -9204,46 +9204,6 @@ button.bg-darker:focus
     }
 }
 
-@media (min-width: 992px)
-{
-    .d-lg-none
-    {
-        display: none !important;
-    }
-    .d-lg-inline
-    {
-        display: inline !important;
-    }
-    .d-lg-inline-block
-    {
-        display: inline-block !important;
-    }
-    .d-lg-block
-    {
-        display: block !important;
-    }
-    .d-lg-table
-    {
-        display: table !important;
-    }
-    .d-lg-table-row
-    {
-        display: table-row !important;
-    }
-    .d-lg-table-cell
-    {
-        display: table-cell !important;
-    }
-    .d-lg-flex
-    {
-        display: flex !important;
-    }
-    .d-lg-inline-flex
-    {
-        display: inline-flex !important;
-    }
-}
-
 @media (min-width: 1200px)
 {
     .d-xl-none
@@ -18862,21 +18822,21 @@ a.btn-icon-only
 
 .mycard
 {
-    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.3);
+    text-align: left;
+    box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.3);
     transition: .4s;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    border: 1px solid rgba(0, 0, 0, .05);
-    border-radius: .375rem;
+    border: 1px dashed #2874f0;
     background-color: #fff;
-    background-clip: border-box;
+    padding: 0px;
+    border-radius: 6px;
 }
 .mycard:hover{
-    background: rgb(255, 0, 0,0.3);
-    transform: scale(0.96);
+    
+    transform: scale(1.05);
+}
+
+.mycard span{
+    color: orange;
 }
 
 .card-translucent
@@ -22261,7 +22221,7 @@ textarea[resize='horizontal']
     }
 }
 
-@media (max-width: 1199.98px)
+@media (max-width: 500px)
 {
     .sidenav
     {

@@ -310,17 +310,17 @@ const Index = () => {
                                     <div className="col-md-8">
                                         <div class="member-info">
                                             <h4>Manmeet Juneja</h4>
-                                            <span>Role of Manmeet Juneja</span>
+                                            <span>Project Manager and Developer</span>
                                             <ul>
-                                                <li>First Point of role</li>
-                                                <li>Second Point of role</li>
-                                                <li>Third Point of role</li>
-                                                <li>Deployment Project on (Heroku)</li>
+                                                <li>Gather Requirements and Insights</li>
+                                                <li>Assigning and Reviewing Tasks</li>
+                                                <li>Manage Database (MongoDB)</li>
+                                                <li>Testing Components</li>
                                             </ul>
                                             <div class="social">
                                                 <a href="https://github.com/manmeetjuneja" target="blank"><i class='bx bxl-github bx-tada'></i></a>
                                                 <a href="https://www.linkedin.com/in/manmeet-juneja-7231a9161/" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
-                                                <a href="https://nayanpal777.github.io/" target="blank"><i class='bx bxl-product-hunt bx-tada' ></i></a>
+                                                <a href="https://manmeetjuneja.github.io/" target="blank"><i class='bx bxl-product-hunt bx-tada' ></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -336,16 +336,16 @@ const Index = () => {
                                     <div className="col-md-8">
                                         <div class="member-info">
                                             <h4>Sarwesh Chitambre</h4>
-                                            <span>Role of Sarwesh Chitambre</span>
+                                            <span>Data Researcher and Developer</span>
                                             <ul>
-                                                <li>First Point of role</li>
-                                                <li>Second Point of role</li>
-                                                <li>Third Point of role</li>
-                                                <li>Deployment Project on (Heroku)</li>
+                                                <li>Reviewing Competitors</li>
+                                                <li>Testing Components</li>
+                                                <li>Managing Data and Insights</li>
+                                                <li>Design FrontEnd layout</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="#link" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
-                                                <a href="#link" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://github.com/sarweshChitambares" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="https://www.linkedin.com/in/sarwesh-chitambare-bb64361b3" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -361,16 +361,16 @@ const Index = () => {
                                     <div className="col-md-8">
                                         <div class="member-info">
                                             <h4>Shakshi Maheshwari</h4>
-                                            <span>Role of Shakshi Maheshwari</span>
+                                            <span>Data Researcher and Developer</span>
                                             <ul>
-                                                <li>First Point of role</li>
-                                                <li>Second Point of role</li>
-                                                <li>Third Point of role</li>
-                                                <li>Deployment Project on (Heroku)</li>
+                                                <li>Reviewing Competitors</li>
+                                                <li>Testing Components</li>
+                                                <li>Managing Data and Insights</li>
+                                                <li>Design FrontEnd layout</li>
                                             </ul>
                                             <div class="social">
-                                                <a href="#link" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
-                                                <a href="#link" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
+                                                <a href="https://github.com/Shakshi16" target="blank"><i class='bx bxl-github bx-tada' ></i></a>
+                                                <a href="https://www.linkedin.com/in/shakshi-maheshwari-7a41b7194" target="blank"><i class='bx bxl-linkedin-square bx-tada'></i></a>
                                             </div>
                                         </div>
                                     </div>

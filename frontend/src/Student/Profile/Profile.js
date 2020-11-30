@@ -34,7 +34,7 @@ const Profile = () => {
                         </div>
                         <div className="container-fluid mt-1">
                             <div className="row">
-                                <div className="col-xl-8 offset-2">
+                                <div className="col-12 col-md-8 offset-md-2">
                                     <div className="card card-profile">
                                         <img src={profilebg} alt="Background Img" className="card-img-top" height="200px"/>
                                         <div className="row justify-content-center">

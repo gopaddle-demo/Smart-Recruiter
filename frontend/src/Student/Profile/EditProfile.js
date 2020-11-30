@@ -77,8 +77,8 @@ const EditProfile = () => {
             alert('please enter enrollment id');
         } else if (branch === "") {
             alert('please enter Branch');
-        } else if (mobile_number === "") {
-            alert('please enter mobile number');
+        } else if (mobile_number.toString().length !== 10 || mobile_number.toString().length > 10) {
+            alert('please enter valid mobile number');
         } else if (year_of_passing === "") {
             alert('please enter year of passing');
         } else {
@@ -102,7 +102,7 @@ const EditProfile = () => {
 
     useEffect(() => {
         getStudentFromLocal()
-    },[]);
+    }, []);
     return (
         <Base>
             <div className="header bg-main pb-6">
@@ -134,7 +134,7 @@ const EditProfile = () => {
                                             </div>
                                             <div className="col-6">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Email<span class="asteriskField">*</span></span>
+                                                    <span className="label-input100">Email</span>
                                                     <input disabled className="input100" type="text" placeholder="Please enter new password" value={email} />
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
@@ -143,8 +143,8 @@ const EditProfile = () => {
                                         <div className="row">
                                             <div className="col-6">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Enrollment id<span class="asteriskField">*</span></span>
-                                                    <input className="input100" type="text" placeholder="Please enter new password" value={enrollment_id} onChange={handleChange("enrollment_id")} />
+                                                    <span className="label-input100">Enrollment id</span>
+                                                    <input disabled className="input100" type="text" placeholder="Please enter new password" value={enrollment_id} onChange={handleChange("enrollment_id")} />
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
                                             </div>
@@ -172,8 +172,8 @@ const EditProfile = () => {
                                             </div>
                                             <div className="col-6">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Year of passing<span class="asteriskField">*</span></span>
-                                                    <input className="input100" type="text" placeholder="Please enter new password" value={year_of_passing} onChange={handleChange("year_of_passing")} />
+                                                    <span className="label-input100">Year of passing</span>
+                                                    <input disabled className="input100" type="text" placeholder="Please enter new password" value={year_of_passing} onChange={handleChange("year_of_passing")} />
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
                                             </div>
