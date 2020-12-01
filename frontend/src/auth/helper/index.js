@@ -27,19 +27,9 @@ export const admin_login = admin => {
  * Admin Logout API 
 *******************************/
 export const admin_logout = () => {
-    return fetch(`${API}Admin/logout`, {
-        method: "GET",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        }
-    })
-        .then(res => {
-            return res.json();
-        })
-        .catch(err => {
-            console.log(err);
-        })
+    if (typeof window !== undefined) {
+        localStorage.clear();
+    }
 }
 
 /** ************************************
@@ -116,7 +106,7 @@ export const getlocalstore = (val) => {
     if (typeof window !== undefined) {
         if (localStorage.getItem(val)) {
             companyData = JSON.parse(localStorage.getItem(val));
-        } 
+        }
     }
     return companyData;
 }
@@ -154,7 +144,7 @@ export const getStudentDetails = () => {
 /**********************************************
  * Add Company Form Details by Admin
  ***********************************************/
-export const add_company_form_details = Formdetails =>{
+export const add_company_form_details = Formdetails => {
     return fetch(`${API}Admin/company/Add_company_form`, {
         method: "POST",
         headers: {
@@ -187,4 +177,15 @@ export const getCompanyFormDetails = () => {
         .catch(e => {
             console.log(e);
         })
+}
+/** **************************
+ * Admin Auth API 
+*******************************/
+export const isAdminAuthenticated = () => {
+    if (typeof window === undefined)
+        return false;
+    if (localStorage.getItem('admin'))
+        return true;
+    else
+        return false;
 }

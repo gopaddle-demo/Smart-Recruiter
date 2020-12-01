@@ -2,7 +2,7 @@
  * Import Require modules
  ******************************************/
 import React, { useState } from 'react'
-import { admin_login } from '../auth/helper'
+import { admin_login, localStore } from '../auth/helper'
 import { Redirect } from 'react-router-dom'
 
 import '../css/main.css'
@@ -73,16 +73,20 @@ const Home = () => {
         admin_login({ email, password })
             .then(data => {
                 console.log("Data", data);
-                if (data.status) {
-                    setvalues({
-                        ...values,
-                        didRedirect: true
+                if (data.status === true) {
+                    localStore('admin', data.data, ()=>{
+                        setvalues({
+                            ...values,
+                            didRedirect: true
+                        })
                     })
                 } else {
                     setvalues({
                         ...values,
                         error: true,
-                        errmsg: data.msg
+                        errmsg: data.msg,
+                        email: '',
+                        password: ''
                     })
                 }
             })

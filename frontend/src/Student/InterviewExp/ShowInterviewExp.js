@@ -3,6 +3,7 @@ import Base from '../Base';
 import { GetInterviewExpDetails } from '../../auth/studenthelper/StudentIndex';
 import { localStore, getlocalstore } from '../../auth/helper';
 import '../css/StudentDashBoard.css';
+import speechless from '../../images/speechless.gif';
 
 const ShowInterviewExp = () => {
 
@@ -12,6 +13,7 @@ const ShowInterviewExp = () => {
         loading: false,
         showmodel: false
     });
+    var count = 0;
     const { loading, showmodel } = values;
 
     const loadingmsg = () => {
@@ -82,6 +84,18 @@ const ShowInterviewExp = () => {
     useEffect(() => {
         getDataFromDB();
     }, []);
+
+    const displayNoneMsg = () => {
+        if (count === 0) {
+            return (
+                <div className="col-md-12 text-center displaymsgapproval">
+                    <h1>There is No Interview Experience to display</h1>
+                    <img src={speechless} alt="all done"/>
+                </div>
+            )
+        }
+    }
+
     return (
         <Base>
             <div className="header bg-main pb-6">
@@ -100,6 +114,7 @@ const ShowInterviewExp = () => {
                             {loadingmsg()}
                             {interviewExp.map((data, index) => {
                                 if (data.Approval === true) {
+                                    count++;
                                     return (
                                         <button className="col-md-6 mt-3" data-toggle="modal" data-target="#companyModel2" key={index} onClick={individualStudentData(data._id)}>
                                             <div id="interviewH2">
@@ -118,6 +133,7 @@ const ShowInterviewExp = () => {
                                     )
                                 }
                             })}
+                            {displayNoneMsg()}
                         </div>
                         {InterviewDetailsModel()}
                     </div>

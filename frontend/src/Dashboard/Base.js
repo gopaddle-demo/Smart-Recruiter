@@ -15,15 +15,8 @@ const Base = ({
     const { logoutmsg } = value;
 
     const logout = () => {
-        admin_logout()
-            .then(data => {
-                if (data.status === true) {
-                    setvalue({
-                        ...value,
-                        logoutmsg: true
-                    })
-                }
-            })
+        admin_logout();
+        setvalue({ ...value, logoutmsg: true });
     }
     const performlogout = () => {
         return (
@@ -40,7 +33,7 @@ const Base = ({
                 <div className="scrollbar-inner">
                     <div className="sidenav-header align-items-center mb-7">
                         <span className="navbar-brand">
-                            <img src={logo} alt="Svvv logo" style={{maxHeight: "98px"}}/>
+                            <img src={logo} alt="Svvv logo" style={{ maxHeight: "98px" }} />
                             <h1>Smart Recruiter</h1>
                         </span>
                     </div>

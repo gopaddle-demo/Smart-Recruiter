@@ -35,6 +35,7 @@ import FourthYear from './Student/Years/FourthYear';
 import CompanyForm from './Dashboard/CompanyForm';
 import InterviewExp from './Student/InterviewExp/InterviewExp';
 import ShowInterviewExp from './Student/InterviewExp/ShowInterviewExp';
+import AdminPrivateRoute from './auth/privateRoute/AdminPrivateRoute';
 
 const Routes = () =>{
     return(
@@ -43,12 +44,12 @@ const Routes = () =>{
                 <Switch>
                     <Route path="/" exact component={Index}></Route>
                     <Route path="/Admin" exact component={Home}></Route>
-                    <Route path="/dashboard" exact component={dashboard}></Route>
-                    <Route path="/company" exact component={company}></Route>
-                    <Route path="/student" exact component={Student}></Route>
-                    <Route path="/alumni" exact component={Alumni}></Route>
+                    <AdminPrivateRoute path="/dashboard" exact component={dashboard} />
+                    <AdminPrivateRoute path="/company" exact component={company} />
+                    <AdminPrivateRoute path="/student" exact component={Student} />
+                    <AdminPrivateRoute path="/alumni" exact component={Alumni} />
+                    <AdminPrivateRoute path="/CompanyForm" exact component={CompanyForm}/>
                     <Route path="/StudentLogin" exact component={StudentLogin}></Route>
-                    <Route path="/CompanyForm" exact component={CompanyForm}></Route>
                     <PrivateRoute path="/StudentHome" exact component={StudentHome} />
                     <PrivateRoute path="/RoadmapsHome" exact component={RoadmapsHome} />
                     <PrivateRoute path="/YearHome" exact component={YearHome} />

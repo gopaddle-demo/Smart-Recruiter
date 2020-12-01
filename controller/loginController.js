@@ -91,8 +91,12 @@ router.post('/login',
             } else {
                 bcryptjs.compare(req.body.password, admin.password, (err, isMatch) => {
                     //if error
-                    if (err)
-                        return res.send('error');
+                    if (err) {
+                        return res.json({
+                            status: false,
+                            msg: 'Server Error'
+                        });
+                    }
 
                     //check password valid or not
                     if (isMatch === false) {
@@ -105,7 +109,8 @@ router.post('/login',
                         sessStore.email = req.body.email;
                         return res.status(200).json({
                             status: true,
-                            msg: 'Login Sucessfully....'
+                            msg: 'Login Sucessfully....',
+                            data: admin
                         });
                     }
                 });

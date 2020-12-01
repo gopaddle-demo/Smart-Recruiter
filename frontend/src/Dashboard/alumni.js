@@ -4,6 +4,7 @@ import './css/nucleo.css'
 import './css/argon.css'
 import { localStore, getlocalstore } from '../auth/helper'
 import { GetInterviewExpDetails, ApprovalInterviewDetails } from '../auth/studenthelper/StudentIndex'
+import clapping from '../images/clapping.gif';
 
 const Alumni = () => {
 
@@ -12,9 +13,9 @@ const Alumni = () => {
     const [values, setValues] = useState({
         loading: false,
         showmodel: false,
-        didredirect: false
+        didredirect: false,
     })
-
+    var count = 0;
     const { loading, showmodel } = values;
     const getDetailsOfInterview = () => {
         if (getlocalstore("InterviewExp").length !== 0) {
@@ -67,6 +68,16 @@ const Alumni = () => {
                     getDataFromDB();
                 }
             })
+    }
+    const displayNoneMsg = () => {
+        if (count === 0) {
+            return (
+                <div className="col-md-12 text-center displaymsgapproval">
+                    <h1>All Interview Experience are Approval</h1>
+                    <img src={clapping} alt="all done"/>
+                </div>
+            )
+        }
     }
     const InterviewDetailsModel = () => {
         return (
@@ -143,8 +154,9 @@ const Alumni = () => {
                             {loadingmsg()}
                             {interviewExp.map((data, index) => {
                                 if (data.Approval === false) {
+                                    count++;
                                     return (
-                                        <button className="col-xl-3 col-md-6 mt-3" data-toggle="modal" data-target="#companyModel" key={index} onClick={individualStudentData(data._id)}>
+                                        <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#companyModel" key={index} onClick={individualStudentData(data._id)}>
                                             <div className="mycard card-stats">
                                                 <div className="card-body">
                                                     <div className="row">
@@ -159,6 +171,7 @@ const Alumni = () => {
                                     )
                                 }
                             })}
+                            {displayNoneMsg()}
                         </div>
                         {InterviewDetailsModel()}
                     </div>

@@ -29723,3 +29723,6 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     color: white;
 }
 
+.displaymsgapproval img{
+    border-radius: 50%;
+}
