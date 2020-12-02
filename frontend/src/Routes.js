@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ReactGa from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './Home/Home';
@@ -35,12 +36,11 @@ import CompanyForm from './Dashboard/CompanyForm';
 import InterviewExp from './Student/InterviewExp/InterviewExp';
 import ShowInterviewExp from './Student/InterviewExp/ShowInterviewExp';
 import AdminPrivateRoute from './auth/privateRoute/AdminPrivateRoute';
-import ReactGa from 'react-ga';
 
 const Routes = () =>{
 
     useEffect(() => {
-        ReactGa.initialize('G-FTZE6V5M5X');
+        ReactGa.initialize('G-HH20HZVZWJ');
         ReactGa.pageview(window.location.pathname + window.location.search);
       
     }, []);
