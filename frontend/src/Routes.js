@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './Home/Home';
@@ -12,7 +12,6 @@ import StudentHome from './Student/StudentHome';
 import RoadmapsHome from './Student/Roadmaps/RoadmapsHome';
 import YearHome from './Student/Years/YearHome';
 import PageNotFound from './PageNotFound';
-import off_campus from './Student/off_campus/off_campus';
 import Profile from './Student/Profile/Profile';
 import ChangePassword from './Student/Profile/ChangePassword';
 import EditProfile from './Student/Profile/EditProfile';
@@ -36,8 +35,15 @@ import CompanyForm from './Dashboard/CompanyForm';
 import InterviewExp from './Student/InterviewExp/InterviewExp';
 import ShowInterviewExp from './Student/InterviewExp/ShowInterviewExp';
 import AdminPrivateRoute from './auth/privateRoute/AdminPrivateRoute';
+import ReactGa from 'react-ga';
 
 const Routes = () =>{
+
+    useEffect(() => {
+        ReactGa.initialize('G-FTZE6V5M5X');
+        ReactGa.pageview(window.location.pathname + window.location.search);
+      
+    }, []);
     return(
         <div>
             <Router>
