@@ -155,6 +155,7 @@ const StudentLogin = () => {
             } else if (password !== Cpassword) {
                 alert("password and conform password NOT match");
             } else {
+                setStudent({ ...Student, loading: true });
                 studentSignUp({ name, email, enrollment_id, branch, mobile_number, year_of_passing, password })
                     .then(data => {
                         if (data.status === true) {
@@ -171,7 +172,8 @@ const StudentLogin = () => {
                                 condition: "login",
                                 success: true,
                                 error: false,
-                                msg: data.msg
+                                msg: data.msg,
+                                loading: false
                             })
                         } else if (data.status === false) {
                             setStudent({
@@ -422,13 +424,6 @@ const StudentLogin = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div class="modal-footer">
-                        {successmsg()}
-                        {loadingmsg()}
-                        {errormsg()}
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
-                        <button type="button" class="btn btn-primary" onClick={onSubmit}>SignUp</button>
-                    </div> */}
                 </div>
             )
         )
@@ -461,7 +456,6 @@ const StudentLogin = () => {
                 <div class="modal-footer">
                     {successmsg()}
                     {errormsg()}
-                    {loadingmsg()}
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
                     <button type="button" class="btn btn-primary" onClick={onSubmit}>SignUp</button>
                 </div>

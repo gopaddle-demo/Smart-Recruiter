@@ -36,9 +36,8 @@ import InterviewExp from './Student/InterviewExp/InterviewExp';
 import ShowInterviewExp from './Student/InterviewExp/ShowInterviewExp';
 import AdminPrivateRoute from './auth/privateRoute/AdminPrivateRoute';
 
-const Routes = () =>{
-
-    return(
+const Routes = () => {
+    return (
         <div>
             <Router>
                 <Switch>
@@ -48,7 +47,7 @@ const Routes = () =>{
                     <AdminPrivateRoute path="/company" exact component={company} />
                     <AdminPrivateRoute path="/student" exact component={Student} />
                     <AdminPrivateRoute path="/alumni" exact component={Alumni} />
-                    <AdminPrivateRoute path="/CompanyForm" exact component={CompanyForm}/>
+                    <AdminPrivateRoute path="/CompanyForm" exact component={CompanyForm} />
                     <Route path="/StudentLogin" exact component={StudentLogin}></Route>
                     <PrivateRoute path="/StudentHome" exact component={StudentHome} />
                     <PrivateRoute path="/RoadmapsHome" exact component={RoadmapsHome} />
@@ -56,7 +55,7 @@ const Routes = () =>{
                     <PrivateRoute path="/ShowInterviewExp" exact component={ShowInterviewExp} />
                     <PrivateRoute path="/Profile" exact component={Profile} />
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
-                    <PrivateRoute path="/EditProfile" exact component={EditProfile} /> 
+                    <PrivateRoute path="/EditProfile" exact component={EditProfile} />
                     <PrivateRoute path="/WebDevelopment" exact component={WebDevelopment} />
                     <PrivateRoute path="/WebDevelopment/Basic" exact component={BasicWebDevelopment} />
                     <PrivateRoute path="/WebDevelopment/Front-End-Web-Development" exact component={FrontEndWebDevelopment} />
@@ -65,15 +64,15 @@ const Routes = () =>{
                     <PrivateRoute path="/CompetitiveProgramming" exact component={CompetitiveCodingIndex} />
                     <PrivateRoute path="/CompetitiveProgramming/Basic" exact component={CompetitiveBasic} />
                     <PrivateRoute path="/CompetitiveProgramming/Roadmap" exact component={CompetitiveRoadmap} />
-                    <PrivateRoute path ="/CompetitiveProgramming/DataStruture" exact component={DataStructures} />
-                    <PrivateRoute path ="/CompetitiveProgramming/Algorithms" exact component={Algorithms}/>
-                    <PrivateRoute path ="/StudentAlumni" exact component={AlumniIndex}/>
+                    <PrivateRoute path="/CompetitiveProgramming/DataStruture" exact component={DataStructures} />
+                    <PrivateRoute path="/CompetitiveProgramming/Algorithms" exact component={Algorithms} />
+                    <PrivateRoute path="/StudentAlumni" exact component={AlumniIndex} />
                     <PrivateRoute path="/Year/FirstYear" exact component={FirstYear} />
-                    <PrivateRoute path ="/Year/SecondYear" exact component={SecondYear} />
-                    <PrivateRoute path ="/Year/ThirdYear" exact component={ThirdYear}/>
-                    <PrivateRoute path ="/Year/FourthYear" exact component={FourthYear}/>
-                    <PrivateRoute path ="/InterviewExperience" exact component={InterviewExp}/>
-                    
+                    <PrivateRoute path="/Year/SecondYear" exact component={SecondYear} />
+                    <PrivateRoute path="/Year/ThirdYear" exact component={ThirdYear} />
+                    <PrivateRoute path="/Year/FourthYear" exact component={FourthYear} />
+                    <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
+
                     <Route path="*" exact component={PageNotFound}></Route>
                 </Switch>
             </Router>

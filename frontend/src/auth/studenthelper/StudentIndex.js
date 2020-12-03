@@ -2,7 +2,7 @@
  * Import API 
  --------------------------*/
 import { API } from '../../backend'
-
+import ReactGa from 'react-ga';
 /** **************************
  * Student SignUp API 
 *******************************/
@@ -104,6 +104,8 @@ export const updateProfile = student => {
  * Student Auth API 
 *******************************/
 export const isAuthenticated = () => {
+    ReactGa.initialize('G-HH20HZVZWJ');
+    ReactGa.pageview(window.location.pathname + window.location.search);
     if (typeof window === undefined)
         return false;
     if (localStorage.getItem('student'))
