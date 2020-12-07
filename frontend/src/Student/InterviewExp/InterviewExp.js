@@ -15,7 +15,7 @@ const InterviewExp = () => {
         loading: false,
         success: false,
         error: false,
-        msg: "Data Added"
+        msg: ""
     });
 
     const { email, Student_name, Company_Name, Stpackage, Date_of_interview, Student_exp, loading, success, error, msg } = interviewDetails;
@@ -34,10 +34,10 @@ const InterviewExp = () => {
         return (
             success && (
                 <div className="row mt-2 ml-1">
-                    <div className="col-md-12 alert alert-success">
-                        <h5 className="text-white">
+                    <div className="col-md-10 alert alert-success">
+                        <h4>
                             {msg}
-                        </h5>
+                        </h4>
                     </div>
                 </div>
             )
@@ -59,7 +59,7 @@ const InterviewExp = () => {
         return (
             error && (
                 <div className="row mt-2 ml-1">
-                    <div className="col-md-6 alert alert-danger">
+                    <div className="col-md-10 alert alert-danger">
                         <h4>
                             {msg}
                         </h4>
@@ -72,7 +72,7 @@ const InterviewExp = () => {
     const OnSubmit = (event) => {
         event.preventDefault();
         if (email === "") {
-            alert('server Error Please try later');
+            alert('server Error Please try later....!');
         } else if (Student_name === "") {
             alert('Name field cannot be empty');
         } else if (Company_Name === "") {
@@ -94,7 +94,6 @@ const InterviewExp = () => {
                             loading: false,
                             msg: res.msg,
                             success: true,
-                            email: "",
                             Student_name: "",
                             Company_Name: "",
                             Stpackage: "",
@@ -107,7 +106,6 @@ const InterviewExp = () => {
                             loading: false,
                             msg: res.msg,
                             error: true,
-                            email: "",
                             Student_name: "",
                             Company_Name: "",
                             Stpackage: "",

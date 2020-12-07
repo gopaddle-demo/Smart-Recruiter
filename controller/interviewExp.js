@@ -53,7 +53,7 @@ router.post('/add_interviewExp',
             else if (present) {
                 return res.json({
                     status: false,
-                    msg: "Interview Exprience is already Done....",
+                    msg: "Your Interview Exprience is already Done, Wait for Admin Approval",
                 })
             } else {
                 InterviewExp.create({
